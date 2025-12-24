@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johnprice Osagie - AI Student & Cloud Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">JP</div>
+            <ul class="nav-links">
+                <li><a href="#chi-sono">Chi Sono</a></li>
+                <li><a href="#progetti">Progetti</a></li>
+                <li><a href="#esperienza">Esperienza</a></li>
+                <li><a href="#istruzione">Istruzione</a></li>
+                <li><a href="#cv">CV</a></li>
+            </ul>
+            <div class="nav-socials">
+                <a href="mailto:johnprice.osagie@gmail.com" target="_blank" title="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/johnprice-osagie-960b81250/" target="_blank" title="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path>
+                    </svg>
+                </a>
+                <a href="https://github.com/Johnnyprice29" target="_blank" title="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="chi-sono" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Ciao! 👋</p>
+                <h1 class="hero-title">Johnprice Osagie</h1>
+                <p class="hero-subtitle">AI Student · Cloud Engineer</p>
+                <p class="hero-description">
+                    Studente magistrale in Ingegneria Informatica (AI) al Politecnico di Torino. Appassionato di cloud infrastructure, automation e machine learning. Attualmente lavoro come Cloud Consultant presso Reply Nimbus.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('progetti').scrollIntoView({behavior: 'smooth'})">Scopri Progetti</button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('esperienza').scrollIntoView({behavior: 'smooth'})">Contattami</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-placeholder">
+                    <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M 12 14 C 7 14 3 17 3 21 L 21 21 C 21 17 17 14 12 14 Z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progetti Section -->
+    <section id="progetti" class="projects">
+        <div class="container">
+            <h2 class="section-title">Progetti</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>polito-aw1-2025-exams</h3>
+                    <p>Repository con esercizi e progetti del corso Advanced Web Applications 1 (2025).</p>
+                    <p class="project-tags">React · JavaScript · Web Development</p>
+                    <a href="https://github.com/Johnnyprice29/polito-aw1-2025-exams" target="_blank" class="project-link">Visualizza →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Cloud Infrastructure Automation</h3>
+                    <p>Script Python e Bash per automazione di infrastrutture cloud e gestione multi-tenant.</p>
+                    <p class="project-tags">Python · Bash · Cloud · Automation</p>
+                    <a href="#" class="project-link">In sviluppo →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Data Reconciliation Tools</h3>
+                    <p>Strumenti per verificare consistenza dati tra vCenter, Morpheus e ServiceNow.</p>
+                    <p class="project-tags">Python · Data Integrity · APIs</p>
+                    <a href="#" class="project-link">In sviluppo →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Esperienza Section -->
+    <section id="esperienza" class="experience">
+        <div class="container">
+            <h2 class="section-title">Esperienza</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Cloud Consultant (Part-time)</h3>
+                    <span class="experience-company">Reply Nimbus</span>
+                </div>
+                <p class="experience-period">2023 - Presente</p>
+                <ul class="experience-bullets">
+                    <li>Automated user provisioning workflows using Python scripting to interact with Morpheus Data API, reducing manual overhead by 80% across multi-tenant environments</li>
+                    <li>Engineered data reconciliation pipelines in Python to verify consistency between vCenter infrastructure, Morpheus CMP, and ServiceNow ITSM, ensuring 99.9% data integrity</li>
+                    <li>Developed Bash-based bulk connectivity verification tools using netcat and ping for Windows/Linux environments, enabling rapid infrastructure diagnostics across 500+ endpoints</li>
+                    <li>Implemented Secret Management (Cyphers) and RBAC auditing for multi-tenant cloud platforms, strengthening security posture and compliance</li>
+                    <li>Authored comprehensive technical documentation for automated workflows, enabling knowledge transfer and reducing onboarding time by 40%</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Istruzione Section -->
+    <section id="istruzione" class="education">
+        <div class="container">
+            <h2 class="section-title">Istruzione</h2>
+            
+            <!-- Magistrale -->
+            <div class="education-degree">
+                <h3>Magistrale in Ingegneria Informatica (AI)</h3>
+                <p class="education-school">Politecnico di Torino</p>
+                <p class="education-details">6 esami superati · Media: 27.6/30</p>
+                <div class="education-exams">
+                    <div class="exam-group">
+                        <h4>Esami Magistrali</h4>
+                        <ul>
+                            <li>Machine Learning - 30</li>
+                            <li>Deep Learning - 29</li>
+                            <li>Natural Language Processing - 28</li>
+                            <li>Computer Vision - 27</li>
+                            <li>Advanced Algorithms - 27</li>
+                            <li>Cloud Computing - 28</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Triennale -->
+            <div class="education-degree">
+                <h3>Triennale in Ingegneria Gestionale</h3>
+                <p class="education-school">Politecnico di Torino</p>
+                <p class="education-details">Voto finale: 96/110</p>
+                <div class="education-exams">
+                    <div class="exam-group">
+                        <h4>Esami Principali</h4>
+                        <ul>
+                            <li>Analisi Matematica I - 28</li>
+                            <li>Analisi Matematica II - 27</li>
+                            <li>Geometria - 26</li>
+                            <li>Fisica Generale - 27</li>
+                            <li>Programmazione - 28</li>
+                            <li>Basi di Dati - 29</li>
+                            <li>Algoritmi e Strutture Dati - 28</li>
+                            <li>Sistemi Informativi - 27</li>
+                            <li>Economia Aziendale - 26</li>
+                            <li>Gestione della Produzione - 25</li>
+                            <li>Ricerca Operativa - 20</li>
+                            <li>Sistemi Telematici - 18</li>
+                            <li>Elementi di Diritto Privato - 21</li>
+                            <li>E altri 20+ esami</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="cv-section">
+        <div class="container">
+            <h2 class="section-title">Competenze</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Linguaggi di Programmazione</h3>
+                    <p>Python, JavaScript, Bash, SQL, Java</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & Infrastructure</h3>
+                    <p>AWS, Azure, Docker, Kubernetes, Terraform, Morpheus CMP</p>
+                </div>
+                <div class="skill-category">
+                    <h3>AI & Machine Learning</h3>
+                    <p>TensorFlow, PyTorch, Scikit-learn, NLP, Computer Vision</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <p>React, Node.js, HTML/CSS, REST APIs, Git</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Strumenti & Piattaforme</h3>
+                    <p>ServiceNow, vCenter, Linux, Windows, Postman, GitHub</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <p>Problem Solving, Comunicazione Tecnica, Documentazione, Team Work</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Johnprice Osagie. Tutti i diritti riservati.</p>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/johnprice-osagie-960b81250/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Johnnyprice29" target="_blank">GitHub</a>
+                <a href="mailto:johnprice.osagie@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
