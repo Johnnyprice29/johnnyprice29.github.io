@@ -34,6 +34,10 @@ const translations = {
             card3: {
                 desc: "Strumenti per verificare consistenza dati tra vCenter, Morpheus e ServiceNow.",
                 link: "In sviluppo →"
+            },
+            card4: {
+                desc: "Libreria Node.js per convertire Markdown in PDF con supporto KaTeX e stili professionali.",
+                link: "Visualizza →"
             }
         },
         experience: {
@@ -100,6 +104,10 @@ const translations = {
             card3: {
                 desc: "Tools to verify data consistency between vCenter, Morpheus, and ServiceNow.",
                 link: "In development →"
+            },
+            card4: {
+                desc: "Node.js library to convert Markdown to PDF with KaTeX support and professional styling.",
+                link: "View →"
             }
         },
         experience: {
@@ -166,6 +174,10 @@ const translations = {
             card3: {
                 desc: "Outils pour vérifier la cohérence des données entre vCenter, Morpheus et ServiceNow.",
                 link: "En développement →"
+            },
+            card4: {
+                desc: "Bibliothèque Node.js pour convertir Markdown en PDF avec support KaTeX et style professionnel.",
+                link: "Voir →"
             }
         },
         experience: {
@@ -246,7 +258,7 @@ function renderExams() {
     examsData.forEach(exam => {
         const li = document.createElement('li');
         li.innerHTML = `<span>${exam.name}</span> <span class="grade">${exam.grade}</span>`;
-        
+
         if (exam.level === 'Magistrale' && magistraleContainer) {
             magistraleContainer.appendChild(li);
         } else if (exam.level === 'Triennale' && triennaleContainer) {
@@ -274,11 +286,11 @@ function setLanguage(lang) {
     document.querySelector('[data-i18n="hero.title"]').textContent = t.hero.title;
     document.querySelector('[data-i18n="hero.subtitle"]').textContent = t.hero.subtitle;
     document.querySelector('[data-i18n="hero.description"]').textContent = t.hero.description;
-    
+
     // Updates buttons inside hero
     const btnProjects = document.querySelector('[data-i18n="hero.btnProjects"]');
     if (btnProjects) btnProjects.textContent = t.hero.btnProjects;
-    
+
     const btnContact = document.querySelector('[data-i18n="hero.btnContact"]');
     if (btnContact) btnContact.textContent = t.hero.btnContact;
 
@@ -295,11 +307,13 @@ function setLanguage(lang) {
     document.querySelector('[data-i18n="project.card2.link"]').textContent = t.projects.card2.link;
     document.querySelector('[data-i18n="project.card3.desc"]').textContent = t.projects.card3.desc;
     document.querySelector('[data-i18n="project.card3.link"]').textContent = t.projects.card3.link;
+    document.querySelector('[data-i18n="project.card4.desc"]').textContent = t.projects.card4.desc;
+    document.querySelector('[data-i18n="project.card4.link"]').textContent = t.projects.card4.link;
 
     // Experience
     document.querySelector('[data-i18n="exp.role"]').textContent = t.experience.role;
     document.querySelector('[data-i18n="exp.period"]').textContent = t.experience.period;
-    
+
     const bulletList = document.querySelector('.experience-bullets');
     if (bulletList) {
         bulletList.innerHTML = '';
@@ -313,7 +327,7 @@ function setLanguage(lang) {
     // Education
     document.querySelector('[data-i18n="edu.master"]').textContent = t.education.master;
     document.querySelector('[data-i18n="edu.bachelor"]').textContent = t.education.bachelor;
-    
+
     // Update headers inside exam groups
     document.querySelectorAll('.exam-group h4').forEach(h4 => h4.textContent = t.education.examsTitle);
 
@@ -327,7 +341,7 @@ function setLanguage(lang) {
         skillTitles[4].textContent = t.skills.tools;
         skillTitles[5].textContent = t.skills.soft;
     }
-    
+
     // Footer
     document.querySelector('[data-i18n="footer.rights"]').textContent = `© 2025 Johnprice Osagie. ${t.footer.rights}`;
 
@@ -350,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <button class="lang-btn" data-lang="it">IT</button>
         <button class="lang-btn" data-lang="fr">FR</button>
     `;
-    
+
     const navbar = document.querySelector('.navbar .container');
     if (navbar) {
         navbar.appendChild(langContainer);
