@@ -6,6 +6,7 @@ const translations = {
             projects: "Progetti",
             experience: "Esperienza",
             education: "Istruzione",
+            certs: "Certificazioni",
             cv: "CV"
         },
         hero: {
@@ -14,12 +15,13 @@ const translations = {
             subtitle: "AI Student · Cloud Engineer",
             description: "Studente magistrale in Ingegneria Informatica (AI) al Politecnico di Torino. Appassionato di cloud infrastructure, automation e machine learning. Attualmente lavoro come Cloud Consultant presso Reply Nimbus.",
             btnProjects: "Scopri Progetti",
-            btnContact: "Contattami"
+            btnCV: "Scarica CV"
         },
         sectionTitles: {
             projects: "Progetti",
             experience: "Esperienza",
             education: "Istruzione",
+            certs: "Certificazioni",
             skills: "Competenze"
         },
         projects: {
@@ -54,7 +56,8 @@ const translations = {
         education: {
             bachelor: "Triennale in Ingegneria Gestionale",
             master: "Magistrale in Ingegneria Informatica (AI)",
-            examsTitle: "Esami Superati",
+            erasmus: "Erasmus Exchange (Feb 2024 - Giu 2024)",
+            examsTitle: "Esami & Corsi",
             average: "Media",
             finalGrade: "Voto finale"
         },
@@ -76,6 +79,7 @@ const translations = {
             projects: "Projects",
             experience: "Experience",
             education: "Education",
+            certs: "Certifications",
             cv: "CV"
         },
         hero: {
@@ -84,12 +88,13 @@ const translations = {
             subtitle: "AI Student · Cloud Engineer",
             description: "Master's student in Computer Engineering (AI) at Polytechnic University of Turin. Passionate about cloud infrastructure, automation, and machine learning. Currently working as a Cloud Consultant at Reply Nimbus.",
             btnProjects: "View Projects",
-            btnContact: "Contact Me"
+            btnCV: "Download CV"
         },
         sectionTitles: {
             projects: "Projects",
             experience: "Experience",
             education: "Education",
+            certs: "Certifications",
             skills: "Skills"
         },
         projects: {
@@ -124,7 +129,8 @@ const translations = {
         education: {
             bachelor: "Bachelor in Management Engineering",
             master: "Master in Computer Engineering (AI)",
-            examsTitle: "Passed Exams",
+            erasmus: "Erasmus Exchange (Feb 2024 - Jun 2024)",
+            examsTitle: "Exams & Courses",
             average: "GPA",
             finalGrade: "Final Grade"
         },
@@ -146,6 +152,7 @@ const translations = {
             projects: "Projets",
             experience: "Expérience",
             education: "Formation",
+            certs: "Certifications",
             cv: "CV"
         },
         hero: {
@@ -154,12 +161,13 @@ const translations = {
             subtitle: "Étudiant en IA · Ingénieur Cloud",
             description: "Étudiant en Master en Ingénierie Informatique (IA) à l'École Polytechnique de Turin. Passionné par l'infrastructure cloud, l'automatisation et le machine learning. Je travaille actuellement comme Consultant Cloud chez Reply Nimbus.",
             btnProjects: "Voir Projets",
-            btnContact: "Me Contacter"
+            btnCV: "Télécharger CV"
         },
         sectionTitles: {
             projects: "Projets",
             experience: "Expérience",
             education: "Formation",
+            certs: "Certifications",
             skills: "Compétences"
         },
         projects: {
@@ -194,7 +202,8 @@ const translations = {
         education: {
             bachelor: "Licence en Ingénierie de Gestion",
             master: "Master en Ingénierie Informatique (IA)",
-            examsTitle: "Examens Réussis",
+            erasmus: "Échange Erasmus (Fév 2024 - Juin 2024)",
+            examsTitle: "Examens & Cours",
             average: "Moyenne",
             finalGrade: "Note finale"
         },
@@ -214,37 +223,52 @@ const translations = {
 
 // Exam Data
 const examsData = [
-    { level: "Triennale", name: "Lingua inglese I livello", grade: "superato" },
-    { level: "Triennale", name: "Analisi matematica I", grade: "28/30" },
-    { level: "Triennale", name: "Informatica", grade: "28/30" },
-    { level: "Triennale", name: "Chimica", grade: "21/30" },
-    { level: "Triennale", name: "Algebra lineare e geometria", grade: "21/30" },
-    { level: "Triennale", name: "Fisica I", grade: "25/30" },
-    { level: "Triennale", name: "Economia e organizzazione aziendale", grade: "27/30" },
-    { level: "Triennale", name: "Basi di dati", grade: "21/30" },
-    { level: "Triennale", name: "Statistica", grade: "23/30" },
-    { level: "Triennale", name: "Analisi matematica II", grade: "21/30" },
-    { level: "Triennale", name: "Neuroengineering and active aging (Grandi Sfide - Salute)", grade: "26/30" },
-    { level: "Triennale", name: "Sistemi di produzione", grade: "27/30" },
-    { level: "Triennale", name: "Sistemi elettrici industriali", grade: "29/30" },
-    { level: "Triennale", name: "Ricerca operativa", grade: "18/30" },
-    { level: "Triennale", name: "Tempi difficili - Guerra, Pace", grade: "superato" },
-    { level: "Triennale", name: "Fisica II", grade: "26/30" },
-    { level: "Triennale", name: "Sistemi telematici", grade: "18/30" },
-    { level: "Triennale", name: "Elementi di diritto privato", grade: "20/30" },
-    { level: "Triennale", name: "Programmazione a oggetti", grade: "30/30" },
-    { level: "Triennale", name: "Introduzione alle Applicazioni Web", grade: "26/30" },
-    { level: "Triennale", name: "Programmazione e gestione della produzione", grade: "29/30" },
-    { level: "Triennale", name: "Progettazione di servizi web e reti di calcolatori", grade: "24/30" },
-    { level: "Triennale", name: "Tecniche di programmazione", grade: "23/30" },
-    { level: "Triennale", name: "Attività formative esterne all'Ateneo", grade: "superato" },
-    { level: "Triennale", name: "Prova finale", grade: "superato" },
-    { level: "Magistrale", name: "Big data processing and analytics", grade: "26/30" },
-    { level: "Magistrale", name: "Data Science e Tecnologie per le Basi di Dati", grade: "27/30" },
-    { level: "Magistrale", name: "Applicazioni Web I", grade: "27/30" },
-    { level: "Magistrale", name: "Tecnologie e servizi di rete", grade: "26/30" },
-    { level: "Magistrale", name: "Ingegneria del software", grade: "30/30" },
-    { level: "Magistrale", name: "Bioinformatics", grade: "29/30" }
+    // Triennale
+    { level: "Triennale", name: "Lingua inglese I livello", grade: "superato", uni: "polito" },
+    { level: "Triennale", name: "Analisi matematica I", grade: "28/30", uni: "polito" },
+    { level: "Triennale", name: "Informatica", grade: "28/30", uni: "polito" },
+    { level: "Triennale", name: "Chimica", grade: "21/30", uni: "polito" },
+    { level: "Triennale", name: "Algebra lineare e geometria", grade: "21/30", uni: "polito" },
+    { level: "Triennale", name: "Fisica I", grade: "25/30", uni: "polito" },
+    { level: "Triennale", name: "Economia e organizzazione aziendale", grade: "27/30", uni: "polito" },
+    { level: "Triennale", name: "Basi di dati", grade: "21/30", uni: "polito" },
+    { level: "Triennale", name: "Statistica", grade: "23/30", uni: "polito" },
+    { level: "Triennale", name: "Analisi matematica II", grade: "21/30", uni: "polito" },
+    { level: "Triennale", name: "Neuroengineering and active aging (Grandi Sfide - Salute)", grade: "26/30", uni: "polito" },
+    { level: "Triennale", name: "Sistemi di produzione", grade: "27/30", uni: "polito" },
+    { level: "Triennale", name: "Sistemi elettrici industriali", grade: "29/30", uni: "polito" },
+    { level: "Triennale", name: "Ricerca operativa", grade: "18/30", uni: "polito" },
+    { level: "Triennale", name: "Tempi difficili - Guerra, Pace", grade: "superato", uni: "polito" },
+    { level: "Triennale", name: "Fisica II", grade: "26/30", uni: "polito" },
+    { level: "Triennale", name: "Sistemi telematici", grade: "18/30", uni: "polito" },
+    { level: "Triennale", name: "Elementi di diritto privato", grade: "20/30", uni: "polito" },
+    { level: "Triennale", name: "Programmazione a oggetti", grade: "30/30", uni: "polito" },
+    { level: "Triennale", name: "Introduzione alle Applicazioni Web", grade: "26/30", uni: "polito" },
+    { level: "Triennale", name: "Programmazione e gestione della produzione", grade: "29/30", uni: "polito" },
+    { level: "Triennale", name: "Progettazione di servizi web e reti di calcolatori", grade: "24/30", uni: "polito" },
+    { level: "Triennale", name: "Tecniche di programmazione", grade: "23/30", uni: "polito" },
+    { level: "Triennale", name: "Attività formative esterne all'Ateneo", grade: "superato", uni: "polito" },
+    { level: "Triennale", name: "Prova finale", grade: "superato", uni: "polito" },
+
+    // Magistrale (PoliTo)
+    { level: "Magistrale", name: "Big data processing and analytics", grade: "26/30", uni: "polito" },
+    { level: "Magistrale", name: "Data Science e Tecnologie per le Basi di Dati", grade: "27/30", uni: "polito" },
+    { level: "Magistrale", name: "Applicazioni Web I", grade: "27/30", uni: "polito" },
+    { level: "Magistrale", name: "Tecnologie e servizi di rete", grade: "26/30", uni: "polito" },
+    { level: "Magistrale", name: "Ingegneria del software", grade: "30/30", uni: "polito" },
+    { level: "Magistrale", name: "Bioinformatics", grade: "29/30", uni: "polito" },
+
+    // Magistrale (Y SCHOOLS - Erasmus)
+    { level: "Magistrale", name: "Entrepreneurship", grade: "Validated", uni: "yschools" },
+    { level: "Magistrale", name: "Français semestre 2", grade: "Validated", uni: "yschools" },
+    { level: "Magistrale", name: "Customer Relationship Management (CRM)", grade: "Validated", uni: "yschools" },
+    { level: "Magistrale", name: "Brand Management", grade: "Validated", uni: "yschools" },
+    { level: "Magistrale", name: "Salesforce Management", grade: "Validated", uni: "yschools" },
+    { level: "Magistrale", name: "Web Design Nocode", grade: "Validated", uni: "yschools" },
+    { level: "Magistrale", name: "Contemporary history and emerging debates", grade: "Validated", uni: "yschools" },
+    { level: "Magistrale", name: "Global Human Resources Management", grade: "Validated", uni: "yschools" },
+    { level: "Magistrale", name: "Cultural studies - Africa in global context", grade: "Validated", uni: "yschools" },
+    { level: "Magistrale", name: "Regional institutions and African business environment", grade: "Validated", uni: "yschools" }
 ];
 
 // Helper to Render Exams
@@ -257,7 +281,13 @@ function renderExams() {
 
     examsData.forEach(exam => {
         const li = document.createElement('li');
-        li.innerHTML = `<span>${exam.name}</span> <span class="grade">${exam.grade}</span>`;
+
+        let uniTag = '';
+        if (exam.uni === 'yschools') {
+            uniTag = '<span class="uni-badge yschools">Y SCHOOLS</span>';
+        }
+
+        li.innerHTML = `<span>${exam.name} ${uniTag}</span> <span class="grade">${exam.grade}</span>`;
 
         if (exam.level === 'Magistrale' && magistraleContainer) {
             magistraleContainer.appendChild(li);
@@ -279,7 +309,8 @@ function setLanguage(lang) {
     document.querySelector('[data-i18n="nav.projects"]').textContent = t.nav.projects;
     document.querySelector('[data-i18n="nav.experience"]').textContent = t.nav.experience;
     document.querySelector('[data-i18n="nav.education"]').textContent = t.nav.education;
-    document.querySelector('[data-i18n="nav.cv"]').textContent = t.nav.cv;
+    document.querySelector('[data-i18n="nav.certs"]').textContent = t.nav.certs;
+    if (t.nav.cv) document.querySelector('[data-i18n="nav.cv"]').textContent = t.nav.cv; // Button might replace link
 
     // Hero
     document.querySelector('[data-i18n="hero.greeting"]').textContent = t.hero.greeting;
@@ -291,13 +322,14 @@ function setLanguage(lang) {
     const btnProjects = document.querySelector('[data-i18n="hero.btnProjects"]');
     if (btnProjects) btnProjects.textContent = t.hero.btnProjects;
 
-    const btnContact = document.querySelector('[data-i18n="hero.btnContact"]');
-    if (btnContact) btnContact.textContent = t.hero.btnContact;
+    const btnCV = document.querySelector('[data-i18n="hero.btnCV"]');
+    if (btnCV) btnCV.textContent = t.hero.btnCV;
 
     // Section Titles
     document.querySelectorAll('[data-i18n="section.projects"]').forEach(el => el.textContent = t.sectionTitles.projects);
     document.querySelectorAll('[data-i18n="section.experience"]').forEach(el => el.textContent = t.sectionTitles.experience);
     document.querySelectorAll('[data-i18n="section.education"]').forEach(el => el.textContent = t.sectionTitles.education);
+    document.querySelectorAll('[data-i18n="section.certs"]').forEach(el => el.textContent = t.sectionTitles.certs);
     document.querySelectorAll('[data-i18n="section.skills"]').forEach(el => el.textContent = t.sectionTitles.skills);
 
     // Projects
@@ -328,6 +360,9 @@ function setLanguage(lang) {
     document.querySelector('[data-i18n="edu.master"]').textContent = t.education.master;
     document.querySelector('[data-i18n="edu.bachelor"]').textContent = t.education.bachelor;
 
+    const eduErasmus = document.querySelector('[data-i18n="edu.erasmus"]');
+    if (eduErasmus) eduErasmus.textContent = t.education.erasmus;
+
     // Update headers inside exam groups
     document.querySelectorAll('.exam-group h4').forEach(h4 => h4.textContent = t.education.examsTitle);
 
@@ -351,12 +386,10 @@ function setLanguage(lang) {
     });
 }
 
-// Initialization
+// Initialization and Render logic remains same...
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Render Grades
     renderExams();
 
-    // 2. Set up Language Buttons
     const langContainer = document.createElement('div');
     langContainer.className = 'lang-switcher';
     langContainer.innerHTML = `
@@ -366,19 +399,21 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     const navbar = document.querySelector('.navbar .container');
-    if (navbar) {
+    // Check if it already has one (hardcoded in HTML now)
+    if (navbar && !navbar.querySelector('.lang-switcher')) {
         navbar.appendChild(langContainer);
+    } else {
+        // If hardcoded, we attach listeners to existing buttons
     }
 
-    // 3. Event Listeners for Lang Buttons
+    // Event Listeners for Lang Buttons (covers both injected and hardcoded)
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
     });
 
-    // 4. Default Load (English)
     setLanguage('en');
 
-    // 5. Scroll Animations (Existing Logic)
+    // Animations...
     const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -389,12 +424,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.project-card, .experience-item, .education-degree, .skill-category').forEach(el => {
+    document.querySelectorAll('.project-card, .experience-item, .education-degree, .skill-category, .cert-card').forEach(el => {
         el.classList.add('fade-in-section');
         observer.observe(el);
     });
 
-    // Smooth Scrolling
+    // Smooth scroll...
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
