@@ -17,12 +17,12 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">JP</div>
+            <div class="nav-brand">JpO</div>
             <ul class="nav-links">
-                <li><a href="#chi-sono" data-i18n="nav.about">Chi Sono</a></li>
-                <li><a href="#progetti" data-i18n="nav.projects">Progetti</a></li>
-                <li><a href="#esperienza" data-i18n="nav.experience">Esperienza</a></li>
-                <li><a href="#istruzione" data-i18n="nav.education">Istruzione</a></li>
+                <li><a href="#chi-sono" data-i18n="nav.about">About Me</a></li>
+                <li><a href="#progetti" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#esperienza" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#istruzione" data-i18n="nav.education">Education</a></li>
                 <li><a href="#cv" data-i18n="nav.cv">CV</a></li>
             </ul>
             <div class="nav-socials">
@@ -47,6 +47,11 @@
                     </svg>
                 </a>
             </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="it">IT</button>
+                <button class="lang-btn" data-lang="fr">FR</button>
+            </div>
         </div>
     </nav>
 
@@ -54,21 +59,21 @@
     <section id="chi-sono" class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <p class="hero-greeting" data-i18n="hero.greeting">Ciao! 👋</p>
+                <p class="hero-greeting" data-i18n="hero.greeting">Hello! 👋</p>
                 <h1 class="hero-title" data-i18n="hero.title">Johnprice Osagie</h1>
                 <p class="hero-subtitle" data-i18n="hero.subtitle">AI Student · Cloud Engineer</p>
                 <p class="hero-description" data-i18n="hero.description">
-                    Studente magistrale in Ingegneria Informatica (AI) al Politecnico di Torino. Appassionato di cloud
-                    infrastructure, automation e machine learning. Attualmente lavoro come Cloud Consultant presso Reply
-                    Nimbus.
+                    Master's student in Computer Engineering (AI) at Polytechnic University of Turin. Passionate about
+                    cloud infrastructure, automation, and machine learning. Currently working as a Cloud Consultant at
+                    Reply Nimbus.
                 </p>
                 <div class="hero-buttons">
                     <button class="btn btn-primary"
                         onclick="document.getElementById('progetti').scrollIntoView({behavior: 'smooth'})"
-                        data-i18n="hero.btnProjects">Scopri Progetti</button>
+                        data-i18n="hero.btnProjects">View Projects</button>
                     <button class="btn btn-secondary"
-                        onclick="document.getElementById('esperienza').scrollIntoView({behavior: 'smooth'})"
-                        data-i18n="hero.btnContact">Contattami</button>
+                        onclick="document.getElementById('cv').scrollIntoView({behavior: 'smooth'})"
+                        data-i18n="nav.cv">CV & Download</button>
                 </div>
             </div>
             <div class="hero-image">
@@ -86,37 +91,37 @@
     <!-- Progetti Section -->
     <section id="progetti" class="projects">
         <div class="container">
-            <h2 class="section-title" data-i18n="section.projects">Progetti</h2>
+            <h2 class="section-title" data-i18n="section.projects">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>polito-aw1-2025-exams</h3>
-                    <p data-i18n="project.card1.desc">Repository con esercizi e progetti del corso Advanced Web
-                        Applications 1 (2025).</p>
+                    <p data-i18n="project.card1.desc">Repository with exercises and projects for the Advanced Web
+                        Applications 1 course (2025).</p>
                     <p class="project-tags">React · JavaScript · Web Development</p>
                     <a href="https://github.com/Johnnyprice29/esame1-gioco-sfortuna" target="_blank"
-                        class="project-link" data-i18n="project.card1.link">Visualizza →</a>
+                        class="project-link" data-i18n="project.card1.link">View →</a>
                 </div>
                 <div class="project-card">
                     <h3>md-katex-pdf</h3>
-                    <p data-i18n="project.card4.desc">Libreria Node.js per convertire Markdown in PDF con supporto KaTeX
-                        e stili professionali.</p>
+                    <p data-i18n="project.card4.desc">Node.js library to convert Markdown to PDF with KaTeX support and
+                        professional styling.</p>
                     <p class="project-tags">Node.js · Playwright · PDF Generation</p>
                     <a href="https://github.com/Johnnyprice29/md-katex-pdf" target="_blank" class="project-link"
-                        data-i18n="project.card4.link">Visualizza →</a>
+                        data-i18n="project.card4.link">View →</a>
                 </div>
                 <div class="project-card">
                     <h3>Cloud Infrastructure Automation</h3>
-                    <p data-i18n="project.card2.desc">Script Python e Bash per automazione di infrastrutture cloud e
-                        gestione multi-tenant.</p>
+                    <p data-i18n="project.card2.desc">Python and Bash scripts for cloud infrastructure automation and
+                        multi-tenant management.</p>
                     <p class="project-tags">Python · Bash · Cloud · Automation</p>
-                    <a href="#" class="project-link" data-i18n="project.card2.link">In sviluppo →</a>
+                    <a href="#" class="project-link" data-i18n="project.card2.link">In development →</a>
                 </div>
                 <div class="project-card">
                     <h3>Data Reconciliation Tools</h3>
-                    <p data-i18n="project.card3.desc">Strumenti per verificare consistenza dati tra vCenter, Morpheus e
+                    <p data-i18n="project.card3.desc">Tools to verify data consistency between vCenter, Morpheus, and
                         ServiceNow.</p>
                     <p class="project-tags">Python · Data Integrity · APIs</p>
-                    <a href="#" class="project-link" data-i18n="project.card3.link">In sviluppo →</a>
+                    <a href="#" class="project-link" data-i18n="project.card3.link">In development →</a>
                 </div>
             </div>
         </div>
@@ -125,13 +130,13 @@
     <!-- Esperienza Section -->
     <section id="esperienza" class="experience">
         <div class="container">
-            <h2 class="section-title" data-i18n="section.experience">Esperienza</h2>
+            <h2 class="section-title" data-i18n="section.experience">Experience</h2>
             <div class="experience-item">
                 <div class="experience-header">
                     <h3 data-i18n="exp.role">Cloud Consultant (Part-time)</h3>
                     <span class="experience-company">Reply Nimbus</span>
                 </div>
-                <p class="experience-period" data-i18n="exp.period">2023 - Presente</p>
+                <p class="experience-period" data-i18n="exp.period">2023 - Present</p>
                 <ul class="experience-bullets">
                 </ul>
             </div>
@@ -141,31 +146,52 @@
     <!-- Istruzione Section -->
     <section id="istruzione" class="education">
         <div class="container">
-            <h2 class="section-title" data-i18n="section.education">Istruzione</h2>
+            <h2 class="section-title" data-i18n="section.education">Education</h2>
 
-            <!-- Magistrale -->
+            <!-- Triennale -->
             <div class="education-degree">
-                <h3 data-i18n="edu.master">Magistrale in Ingegneria Informatica (AI)</h3>
-                <p class="education-school">Politecnico di Torino</p>
+                <div class="degree-header">
+                    <h3 data-i18n="edu.bachelor">Bachelor in Management Engineering</h3>
+                    <a href="https://www.polito.it/" target="_blank" class="uni-link">Politecnico di Torino</a>
+                </div>
                 <div class="education-exams">
                     <div class="exam-group">
-                        <h4>Esami Superati</h4>
-                        <ul id="exams-magistrale-list">
-                            <!-- Injected by JS -->
+                        <h4 data-i18n="edu.examsTitle">Passed Exams</h4>
+                        <ul id="exams-triennale-list">
+                            <!-- Populated by JS for reactivity, but default English content could go here -->
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Triennale -->
+            <!-- Magistrale -->
             <div class="education-degree">
-                <h3 data-i18n="edu.bachelor">Triennale in Ingegneria Gestionale</h3>
-                <p class="education-school">Politecnico di Torino</p>
+                <div class="degree-header">
+                    <h3 data-i18n="edu.master">Master in Computer Engineering (AI)</h3>
+                    <a href="https://www.polito.it/" target="_blank" class="uni-link">Politecnico di Torino</a>
+                </div>
                 <div class="education-exams">
                     <div class="exam-group">
-                        <h4>Esami Superati</h4>
-                        <ul id="exams-triennale-list">
-                            <!-- Injected by JS -->
+                        <h4 data-i18n="edu.examsTitle">Passed Exams</h4>
+                        <ul id="exams-magistrale-list">
+                            <!-- Populated by JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Erasmus Section (Propria Sezione) -->
+            <div class="education-degree erasmus-card">
+                <div class="degree-header">
+                    <h3 data-i18n="edu.erasmusTitle">International Experience - Erasmus</h3>
+                    <a href="https://yschools.fr/" target="_blank" class="uni-link">Y SCHOOLS (Troyes, France)</a>
+                </div>
+                <p class="education-period" data-i18n="edu.erasmusPeriod">Feb 2024 - Jun 2024</p>
+                <div class="education-exams">
+                    <div class="exam-group">
+                        <h4 data-i18n="edu.examsTitle">Exams & Courses</h4>
+                        <ul id="exams-erasmus-list">
+                            <!-- Populated by JS -->
                         </ul>
                     </div>
                 </div>
@@ -173,33 +199,81 @@
         </div>
     </section>
 
-    <!-- CV Section -->
-    <section id="cv" class="cv-section">
+    <!-- Certifications Section -->
+    <section id="certificazioni" class="certifications">
         <div class="container">
-            <h2 class="section-title" data-i18n="section.skills">Competenze</h2>
+            <h2 class="section-title" data-i18n="section.certs">Certifications</h2>
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">🇬🇧</div>
+                    <div class="cert-content">
+                        <h3 data-i18n="certs.english.title">Cambridge English: First (FCE)</h3>
+                        <p class="cert-score" data-i18n="certs.english.score">Grade A - Level C1 (Score 181)</p>
+                        <p class="cert-date" data-i18n="certs.english.date">Dec 2020</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🇫🇷</div>
+                    <div class="cert-content">
+                        <h3 data-i18n="certs.french.title">French Language Certificate</h3>
+                        <p class="cert-score" data-i18n="certs.french.score">Level B2 / B2+</p>
+                        <p class="cert-issuer" data-i18n="certs.french.issuer">Y SCHOOLS, France</p>
+                        <p class="cert-date" data-i18n="certs.french.date">June 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedicated CV Download Section -->
+    <section id="cv" class="cv-download">
+        <div class="container">
+            <h2 class="section-title" data-i18n="nav.cv">Curriculum Vitae</h2>
+            <div class="cv-card">
+                <div class="cv-info">
+                    <h3 data-i18n="cv.downloadTitle">Full Professional Profile</h3>
+                    <p data-i18n="cv.downloadDesc">Download my latest CV for a detailed overview of my academic
+                        background, technical skills, and professional experiences.</p>
+                </div>
+                <a href="documents/cv_johnprice_osagie.pdf" target="_blank" class="btn btn-primary btn-cv">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y1="3"></line>
+                    </svg>
+                    <span data-i18n="cv.btnDownload">Download PDF</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section.skills">Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Linguaggi</h3>
+                    <h3 data-i18n="skills.lang">Programming Languages</h3>
                     <p>Python, JavaScript, Bash, SQL, Java</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Cloud & Infrastructure</h3>
+                    <h3 data-i18n="skills.cloud">Cloud & Infrastructure</h3>
                     <p>AWS, Azure, Docker, Kubernetes, Terraform, Morpheus CMP</p>
                 </div>
                 <div class="skill-category">
-                    <h3>AI & Machine Learning</h3>
+                    <h3 data-i18n="skills.ai">AI & Machine Learning</h3>
                     <p>TensorFlow, PyTorch, Scikit-learn, NLP, Computer Vision</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Web Development</h3>
+                    <h3 data-i18n="skills.web">Web Development</h3>
                     <p>React, Node.js, HTML/CSS, REST APIs, Git</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Tools</h3>
+                    <h3 data-i18n="skills.tools">Tools & Platforms</h3>
                     <p>ServiceNow, vCenter, Linux, Windows, Postman, GitHub</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Soft Skills</h3>
+                    <h3 data-i18n="skills.soft">Soft Skills</h3>
                     <p>Problem Solving, Tech Comm, Documentation, Team Work</p>
                 </div>
             </div>
@@ -209,12 +283,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p data-i18n="footer.rights">&copy; 2025 Johnprice Osagie. Tutti i diritti riservati.</p>
-            <div class="footer-links">
-                <a href="https://linkedin.com/in/johnprice-osagie-960b81250/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/Johnnyprice29" target="_blank">GitHub</a>
-                <a href="mailto:johnprice.osagie@gmail.com">Email</a>
-            </div>
+            <p data-i18n="footer.rights">&copy; 2025 Johnprice Osagie. All rights reserved.</p>
         </div>
     </footer>
 
