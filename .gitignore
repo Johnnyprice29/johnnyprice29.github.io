@@ -1,3 +1,6 @@
-# Ignore all documents (certs, etc)
-documents/*
+# Ignore private documents (certs)
+documents/*.pdf
 
+# Allow public assets
+!documents/cv_johnprice_osagie.pdf
+!documents/profile.png
