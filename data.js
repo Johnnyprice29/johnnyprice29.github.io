@@ -1,4 +1,4 @@
-const examsData = [
+window.examsData = [
     // Triennale (PoliTo)
     { level: "Triennale", name: "Lingua inglese I livello", grade: { it: "Superato", en: "Passed", fr: "Validé" }, uni: "polito" },
     { level: "Triennale", name: "Analisi matematica I", grade: "28/30", uni: "polito" },

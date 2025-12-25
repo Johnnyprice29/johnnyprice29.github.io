@@ -1,18 +1,22 @@
-// Helper to Render Exams (Now using global examsData from data.js)
+// Helper to Render Exams (Accessing global window.examsData)
 function renderExams(lang = 'en') {
     const magistraleContainer = document.querySelector('#exams-magistrale-list');
     const triennaleContainer = document.querySelector('#exams-triennale-list');
     const erasmusContainer = document.querySelector('#exams-erasmus-list');
 
-    // Clear content
+    // Debug check
+    if (!window.examsData) {
+        console.error("Exams Data not found!");
+        return;
+    }
+
     if (magistraleContainer) magistraleContainer.innerHTML = '';
     if (triennaleContainer) triennaleContainer.innerHTML = '';
     if (erasmusContainer) erasmusContainer.innerHTML = '';
 
-    examsData.forEach(exam => {
+    window.examsData.forEach(exam => {
         const li = document.createElement('li');
 
-        // Determine grade text: object? select by lang. string? use as is.
         let gradeText = exam.grade;
         if (typeof exam.grade === 'object') {
             gradeText = exam.grade[lang] || exam.grade['en'];
@@ -31,13 +35,19 @@ function renderExams(lang = 'en') {
 }
 
 // Language Switching Logic
-let currentLang = 'en'; // Default
+let currentLang = 'en';
 
 function setLanguage(lang) {
     currentLang = lang;
-    const t = translations[lang];
 
-    // Re-render exams to update grades language
+    // Access global translations
+    const t = window.translations ? window.translations[lang] : null;
+    if (!t) {
+        console.error("Translations not found or language invalid:", lang);
+        return;
+    }
+
+    // Re-render exams
     renderExams(lang);
 
     // Navigation
@@ -46,7 +56,10 @@ function setLanguage(lang) {
     document.querySelector('[data-i18n="nav.experience"]').textContent = t.nav.experience;
     document.querySelector('[data-i18n="nav.education"]').textContent = t.nav.education;
     document.querySelector('[data-i18n="nav.certs"]').textContent = t.nav.certs;
-    if (t.nav.cv) document.querySelector('[data-i18n="nav.cv"]').textContent = t.nav.cv;
+    if (t.nav.cv) {
+        const cvEl = document.querySelector('[data-i18n="nav.cv"]');
+        if (cvEl) cvEl.textContent = t.nav.cv;
+    }
 
     // Hero
     document.querySelector('[data-i18n="hero.greeting"]').textContent = t.hero.greeting;
@@ -62,13 +75,20 @@ function setLanguage(lang) {
     if (btnCV) btnCV.textContent = t.hero.btnCV;
 
     // Section Titles
-    document.querySelectorAll('[data-i18n="section.projects"]').forEach(el => el.textContent = t.sectionTitles.projects);
-    document.querySelectorAll('[data-i18n="section.experience"]').forEach(el => el.textContent = t.sectionTitles.experience);
+    // Projects Title
+    const projTitle = document.querySelector('[data-i18n="section.projects"]');
+    if (projTitle) projTitle.textContent = t.sectionTitles.projects;
+
+    // Experience Title
+    const expTitle = document.querySelector('[data-i18n="section.experience"]');
+    if (expTitle) expTitle.textContent = t.sectionTitles.experience;
+
+    // Education, Certs, Skills Titles
     document.querySelectorAll('[data-i18n="section.education"]').forEach(el => el.textContent = t.sectionTitles.education);
     document.querySelectorAll('[data-i18n="section.certs"]').forEach(el => el.textContent = t.sectionTitles.certs);
     document.querySelectorAll('[data-i18n="section.skills"]').forEach(el => el.textContent = t.sectionTitles.skills);
 
-    // Projects
+    // Projects Content
     document.querySelector('[data-i18n="project.card1.desc"]').textContent = t.projects.card1.desc;
     document.querySelector('[data-i18n="project.card1.link"]').textContent = t.projects.card1.link;
     document.querySelector('[data-i18n="project.card2.desc"]').textContent = t.projects.card2.desc;
@@ -78,7 +98,7 @@ function setLanguage(lang) {
     document.querySelector('[data-i18n="project.card4.desc"]').textContent = t.projects.card4.desc;
     document.querySelector('[data-i18n="project.card4.link"]').textContent = t.projects.card4.link;
 
-    // Experience
+    // Experience Content
     document.querySelector('[data-i18n="exp.role"]').textContent = t.experience.role;
     document.querySelector('[data-i18n="exp.period"]').textContent = t.experience.period;
 
@@ -92,21 +112,19 @@ function setLanguage(lang) {
         });
     }
 
-    // Education
+    // Education Content
     document.querySelector('[data-i18n="edu.master"]').textContent = t.education.master;
     document.querySelector('[data-i18n="edu.bachelor"]').textContent = t.education.bachelor;
 
-    // Erasmus details
     const eduErasmusTitle = document.querySelector('[data-i18n="edu.erasmusTitle"]');
     if (eduErasmusTitle) eduErasmusTitle.textContent = t.education.erasmusTitle;
 
     const eduErasmusPeriod = document.querySelector('[data-i18n="edu.erasmusPeriod"]');
     if (eduErasmusPeriod) eduErasmusPeriod.textContent = t.education.erasmusPeriod;
 
-    // Update headers inside exam groups
     document.querySelectorAll('.exam-group h4').forEach(h4 => h4.textContent = t.education.examsTitle);
 
-    // Certifications (New)
+    // Certifications
     document.querySelector('[data-i18n="certs.english.title"]').textContent = t.certs.english.title;
     document.querySelector('[data-i18n="certs.english.score"]').textContent = t.certs.english.score;
     document.querySelector('[data-i18n="certs.english.date"]').textContent = t.certs.english.date;
@@ -137,11 +155,8 @@ function setLanguage(lang) {
     });
 }
 
-// Initialization
 document.addEventListener('DOMContentLoaded', () => {
-    // 3. Event Listeners for Lang Buttons (Wait for DOM)
-
-    // Check for/Create Lang Switcher
+    // Check for existing Lang Switcher or inject
     const navbar = document.querySelector('.navbar .container');
     if (navbar && !navbar.querySelector('.lang-switcher')) {
         const langContainer = document.createElement('div');
@@ -158,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
     });
 
-    // Default Load (will trigger renderExams)
+    // Default Load
     setLanguage('en');
 
     // Animations
@@ -177,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Smooth Scrolling
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
