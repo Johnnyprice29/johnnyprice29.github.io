@@ -56,7 +56,8 @@ const translations = {
         education: {
             bachelor: "Triennale in Ingegneria Gestionale",
             master: "Magistrale in Ingegneria Informatica (AI)",
-            erasmus: "Erasmus Exchange (Feb 2024 - Giu 2024)",
+            erasmusTitle: "Esperienza Internazionale - Erasmus",
+            erasmusPeriod: "Troyes, Francia (Feb 2024 - Giu 2024)",
             examsTitle: "Esami & Corsi",
             average: "Media",
             finalGrade: "Voto finale"
@@ -129,7 +130,8 @@ const translations = {
         education: {
             bachelor: "Bachelor in Management Engineering",
             master: "Master in Computer Engineering (AI)",
-            erasmus: "Erasmus Exchange (Feb 2024 - Jun 2024)",
+            erasmusTitle: "International Experience - Erasmus",
+            erasmusPeriod: "Troyes, France (Feb 2024 - Jun 2024)",
             examsTitle: "Exams & Courses",
             average: "GPA",
             finalGrade: "Final Grade"
@@ -202,7 +204,8 @@ const translations = {
         education: {
             bachelor: "Licence en Ingénierie de Gestion",
             master: "Master en Ingénierie Informatique (IA)",
-            erasmus: "Échange Erasmus (Fév 2024 - Juin 2024)",
+            erasmusTitle: "Expérience Internationale - Erasmus",
+            erasmusPeriod: "Troyes, France (Fév 2024 - Juin 2024)",
             examsTitle: "Examens & Cours",
             average: "Moyenne",
             finalGrade: "Note finale"
@@ -223,7 +226,7 @@ const translations = {
 
 // Exam Data
 const examsData = [
-    // Triennale
+    // Triennale (PoliTo)
     { level: "Triennale", name: "Lingua inglese I livello", grade: "superato", uni: "polito" },
     { level: "Triennale", name: "Analisi matematica I", grade: "28/30", uni: "polito" },
     { level: "Triennale", name: "Informatica", grade: "28/30", uni: "polito" },
@@ -258,41 +261,45 @@ const examsData = [
     { level: "Magistrale", name: "Ingegneria del software", grade: "30/30", uni: "polito" },
     { level: "Magistrale", name: "Bioinformatics", grade: "29/30", uni: "polito" },
 
-    // Magistrale (Y SCHOOLS - Erasmus)
-    { level: "Magistrale", name: "Entrepreneurship", grade: "Validated", uni: "yschools" },
-    { level: "Magistrale", name: "Français semestre 2", grade: "Validated", uni: "yschools" },
-    { level: "Magistrale", name: "Customer Relationship Management (CRM)", grade: "Validated", uni: "yschools" },
-    { level: "Magistrale", name: "Brand Management", grade: "Validated", uni: "yschools" },
-    { level: "Magistrale", name: "Salesforce Management", grade: "Validated", uni: "yschools" },
-    { level: "Magistrale", name: "Web Design Nocode", grade: "Validated", uni: "yschools" },
-    { level: "Magistrale", name: "Contemporary history and emerging debates", grade: "Validated", uni: "yschools" },
-    { level: "Magistrale", name: "Global Human Resources Management", grade: "Validated", uni: "yschools" },
-    { level: "Magistrale", name: "Cultural studies - Africa in global context", grade: "Validated", uni: "yschools" },
-    { level: "Magistrale", name: "Regional institutions and African business environment", grade: "Validated", uni: "yschools" }
+    // Erasmus (Y SCHOOLS) -> Now dedicated section
+    { level: "Erasmus", name: "Entrepreneurship", grade: "Validated", uni: "yschools" },
+    { level: "Erasmus", name: "Français semestre 2", grade: "Validated", uni: "yschools" },
+    { level: "Erasmus", name: "Customer Relationship Management (CRM)", grade: "Validated", uni: "yschools" },
+    { level: "Erasmus", name: "Brand Management", grade: "Validated", uni: "yschools" },
+    { level: "Erasmus", name: "Salesforce Management", grade: "Validated", uni: "yschools" },
+    { level: "Erasmus", name: "Web Design Nocode", grade: "Validated", uni: "yschools" },
+    { level: "Erasmus", name: "Contemporary history and emerging debates", grade: "Validated", uni: "yschools" },
+    { level: "Erasmus", name: "Global Human Resources Management", grade: "Validated", uni: "yschools" },
+    { level: "Erasmus", name: "Cultural studies - Africa in global context", grade: "Validated", uni: "yschools" },
+    { level: "Erasmus", name: "Regional institutions and African business environment", grade: "Validated", uni: "yschools" }
 ];
 
 // Helper to Render Exams
 function renderExams() {
     const magistraleContainer = document.querySelector('#exams-magistrale-list');
     const triennaleContainer = document.querySelector('#exams-triennale-list');
+    const erasmusContainer = document.querySelector('#exams-erasmus-list'); // New
 
     if (magistraleContainer) magistraleContainer.innerHTML = '';
     if (triennaleContainer) triennaleContainer.innerHTML = '';
+    if (erasmusContainer) erasmusContainer.innerHTML = '';
 
     examsData.forEach(exam => {
         const li = document.createElement('li');
 
         let uniTag = '';
         if (exam.uni === 'yschools') {
-            uniTag = '<span class="uni-badge yschools">Y SCHOOLS</span>';
+            uniTag = ''; // No badge inside item if section is branded? Let's keep it simple
         }
 
-        li.innerHTML = `<span>${exam.name} ${uniTag}</span> <span class="grade">${exam.grade}</span>`;
+        li.innerHTML = `<span>${exam.name}</span> <span class="grade">${exam.grade}</span>`;
 
         if (exam.level === 'Magistrale' && magistraleContainer) {
             magistraleContainer.appendChild(li);
         } else if (exam.level === 'Triennale' && triennaleContainer) {
             triennaleContainer.appendChild(li);
+        } else if (exam.level === 'Erasmus' && erasmusContainer) {
+            erasmusContainer.appendChild(li);
         }
     });
 }
@@ -310,7 +317,7 @@ function setLanguage(lang) {
     document.querySelector('[data-i18n="nav.experience"]').textContent = t.nav.experience;
     document.querySelector('[data-i18n="nav.education"]').textContent = t.nav.education;
     document.querySelector('[data-i18n="nav.certs"]').textContent = t.nav.certs;
-    if (t.nav.cv) document.querySelector('[data-i18n="nav.cv"]').textContent = t.nav.cv; // Button might replace link
+    if (t.nav.cv) document.querySelector('[data-i18n="nav.cv"]').textContent = t.nav.cv;
 
     // Hero
     document.querySelector('[data-i18n="hero.greeting"]').textContent = t.hero.greeting;
@@ -360,8 +367,11 @@ function setLanguage(lang) {
     document.querySelector('[data-i18n="edu.master"]').textContent = t.education.master;
     document.querySelector('[data-i18n="edu.bachelor"]').textContent = t.education.bachelor;
 
-    const eduErasmus = document.querySelector('[data-i18n="edu.erasmus"]');
-    if (eduErasmus) eduErasmus.textContent = t.education.erasmus;
+    const eduErasmusTitle = document.querySelector('[data-i18n="edu.erasmusTitle"]');
+    if (eduErasmusTitle) eduErasmusTitle.textContent = t.education.erasmusTitle;
+
+    const eduErasmusPeriod = document.querySelector('[data-i18n="edu.erasmusPeriod"]');
+    if (eduErasmusPeriod) eduErasmusPeriod.textContent = t.education.erasmusPeriod;
 
     // Update headers inside exam groups
     document.querySelectorAll('.exam-group h4').forEach(h4 => h4.textContent = t.education.examsTitle);
@@ -386,10 +396,10 @@ function setLanguage(lang) {
     });
 }
 
-// Initialization and Render logic remains same...
 document.addEventListener('DOMContentLoaded', () => {
     renderExams();
 
+    // ... rest of init
     const langContainer = document.createElement('div');
     langContainer.className = 'lang-switcher';
     langContainer.innerHTML = `
@@ -399,21 +409,18 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     const navbar = document.querySelector('.navbar .container');
-    // Check if it already has one (hardcoded in HTML now)
     if (navbar && !navbar.querySelector('.lang-switcher')) {
         navbar.appendChild(langContainer);
-    } else {
-        // If hardcoded, we attach listeners to existing buttons
     }
 
-    // Event Listeners for Lang Buttons (covers both injected and hardcoded)
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
     });
 
+    // Default Load
     setLanguage('en');
 
-    // Animations...
+    // Scroll Animations
     const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -429,7 +436,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Smooth scroll...
+    // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
