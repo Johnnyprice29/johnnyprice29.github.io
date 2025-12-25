@@ -1,0 +1,48 @@
+const examsData = [
+    // Triennale (PoliTo)
+    { level: "Triennale", name: "Lingua inglese I livello", grade: { it: "Superato", en: "Passed", fr: "Validé" }, uni: "polito" },
+    { level: "Triennale", name: "Analisi matematica I", grade: "28/30", uni: "polito" },
+    { level: "Triennale", name: "Informatica", grade: "28/30", uni: "polito" },
+    { level: "Triennale", name: "Chimica", grade: "21/30", uni: "polito" },
+    { level: "Triennale", name: "Algebra lineare e geometria", grade: "21/30", uni: "polito" },
+    { level: "Triennale", name: "Fisica I", grade: "25/30", uni: "polito" },
+    { level: "Triennale", name: "Economia e organizzazione aziendale", grade: "27/30", uni: "polito" },
+    { level: "Triennale", name: "Basi di dati", grade: "21/30", uni: "polito" },
+    { level: "Triennale", name: "Statistica", grade: "23/30", uni: "polito" },
+    { level: "Triennale", name: "Analisi matematica II", grade: "21/30", uni: "polito" },
+    { level: "Triennale", name: "Neuroengineering and active aging (Grandi Sfide - Salute)", grade: "26/30", uni: "polito" },
+    { level: "Triennale", name: "Sistemi di produzione", grade: "27/30", uni: "polito" },
+    { level: "Triennale", name: "Sistemi elettrici industriali", grade: "29/30", uni: "polito" },
+    { level: "Triennale", name: "Ricerca operativa", grade: "18/30", uni: "polito" },
+    { level: "Triennale", name: "Tempi difficili - Guerra, Pace", grade: { it: "Superato", en: "Passed", fr: "Validé" }, uni: "polito" },
+    { level: "Triennale", name: "Fisica II", grade: "26/30", uni: "polito" },
+    { level: "Triennale", name: "Sistemi telematici", grade: "18/30", uni: "polito" },
+    { level: "Triennale", name: "Elementi di diritto privato", grade: "20/30", uni: "polito" },
+    { level: "Triennale", name: "Programmazione a oggetti", grade: "30/30", uni: "polito" },
+    { level: "Triennale", name: "Introduzione alle Applicazioni Web", grade: "26/30", uni: "polito" },
+    { level: "Triennale", name: "Programmazione e gestione della produzione", grade: "29/30", uni: "polito" },
+    { level: "Triennale", name: "Progettazione di servizi web e reti di calcolatori", grade: "24/30", uni: "polito" },
+    { level: "Triennale", name: "Tecniche di programmazione", grade: "23/30", uni: "polito" },
+    { level: "Triennale", name: "Attività formative esterne all'Ateneo", grade: { it: "Superato", en: "Passed", fr: "Validé" }, uni: "polito" },
+    { level: "Triennale", name: "Prova finale", grade: { it: "Superato", en: "Passed", fr: "Validé" }, uni: "polito" },
+
+    // Magistrale (PoliTo)
+    { level: "Magistrale", name: "Big data processing and analytics", grade: "26/30", uni: "polito" },
+    { level: "Magistrale", name: "Data Science e Tecnologie per le Basi di Dati", grade: "27/30", uni: "polito" },
+    { level: "Magistrale", name: "Applicazioni Web I", grade: "27/30", uni: "polito" },
+    { level: "Magistrale", name: "Tecnologie e servizi di rete", grade: "26/30", uni: "polito" },
+    { level: "Magistrale", name: "Ingegneria del software", grade: "30/30", uni: "polito" },
+    { level: "Magistrale", name: "Bioinformatics", grade: "29/30", uni: "polito" },
+
+    // Erasmus (Y SCHOOLS)
+    { level: "Erasmus", name: "Entrepreneurship", grade: { it: "Convalidato", en: "Validated", fr: "Validé" }, uni: "yschools" },
+    { level: "Erasmus", name: "Français semestre 2", grade: { it: "Convalidato", en: "Validated", fr: "Validé" }, uni: "yschools" },
+    { level: "Erasmus", name: "Customer Relationship Management (CRM)", grade: { it: "Convalidato", en: "Validated", fr: "Validé" }, uni: "yschools" },
+    { level: "Erasmus", name: "Brand Management", grade: { it: "Convalidato", en: "Validated", fr: "Validé" }, uni: "yschools" },
+    { level: "Erasmus", name: "Salesforce Management", grade: { it: "Convalidato", en: "Validated", fr: "Validé" }, uni: "yschools" },
+    { level: "Erasmus", name: "Web Design Nocode", grade: { it: "Convalidato", en: "Validated", fr: "Validé" }, uni: "yschools" },
+    { level: "Erasmus", name: "Contemporary history and emerging debates", grade: { it: "Convalidato", en: "Validated", fr: "Validé" }, uni: "yschools" },
+    { level: "Erasmus", name: "Global Human Resources Management", grade: { it: "Convalidato", en: "Validated", fr: "Validé" }, uni: "yschools" },
+    { level: "Erasmus", name: "Cultural studies - Africa in global context", grade: { it: "Convalidato", en: "Validated", fr: "Validé" }, uni: "yschools" },
+    { level: "Erasmus", name: "Regional institutions and African business environment", grade: { it: "Convalidato", en: "Validated", fr: "Validé" }, uni: "yschools" }
+];
