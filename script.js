@@ -298,7 +298,7 @@ function setLanguage(lang) {
     renderExams(lang);
 
     // Update CV download links based on language
-    const cvSuffix = lang === 'it' ? 'it' : 'en';
+    const cvSuffix = lang; // en, it, or fr
     const cvUrl = `documents/cv_johnprice_osagie_${cvSuffix}.pdf`;
     const cvLinkHero = document.getElementById('cv-link-hero');
     const cvLinkSection = document.getElementById('cv-link-section');

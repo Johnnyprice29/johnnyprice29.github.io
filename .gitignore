@@ -1,12 +1,19 @@
-# Ignore private documents (certs, internal)
+# Ignore private documents
 documents/*.pdf
-documents/*.html
-documents/*.js
 
-# Allow public assets
+# Allow public CV files
 !documents/cv_johnprice_osagie_en.pdf
 !documents/cv_johnprice_osagie_it.pdf
+!documents/cv_johnprice_osagie_fr.pdf
 !documents/profile.png
 
-# Node modules
+# Ignore tmp folder with templates
+documents/tmp/
+
+# Node
 node_modules/
+package-lock.json
+package.json
+
+# Temp files
+*.log
