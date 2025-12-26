@@ -1,6 +1,4 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Johnnyprice29/johnnyprice29.github.io/main/documents/profile.png" width="150" style="border-radius: 50%; border: 4px solid #38b2ac;" />
-  
   <h1>Johnprice Osagie</h1>
   <p><b>🎓 M.Sc. Computer Engineering (AI) Student @ Politecnico di Torino</b></p>
   <p><b>☁️ Cloud Consultant @ Reply Nimbus</b></p>
