@@ -1,6 +1,12 @@
-# Ignore private documents (certs)
+# Ignore private documents (certs, internal)
 documents/*.pdf
+documents/*.html
+documents/*.js
 
 # Allow public assets
-!documents/cv_johnprice_osagie.pdf
+!documents/cv_johnprice_osagie_en.pdf
+!documents/cv_johnprice_osagie_it.pdf
 !documents/profile.png
+
+# Node modules
+node_modules/
