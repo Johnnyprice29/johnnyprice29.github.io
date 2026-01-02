@@ -30,7 +30,7 @@ const translations = {
                 "Ingegnerizzazione pipeline di riconciliazione dati in Python per verificare consistenza tra vCenter, Morpheus CMP e ServiceNow ITSM",
                 "Sviluppo strumenti di verifica connettività massiva basati su Bash usando netcat e ping per ambienti Windows/Linux",
                 "Implementazione Secret Management (Cyphers) e auditing RBAC per piattaforme cloud multi-tenant",
-                "Redazione documentazione tecnica completa per workflow automatizzati, riducendo tempo di onboarding del 40%"
+                "Redazione documentazione tecnica completa per workflow automatizzati"
             ]
         },
         education: {
@@ -73,7 +73,7 @@ const translations = {
                 "Engineered data reconciliation pipelines in Python to verify consistency between vCenter, Morpheus CMP, and ServiceNow ITSM",
                 "Developed Bash-based bulk connectivity verification tools using netcat and ping for Windows/Linux environments",
                 "Implemented Secret Management (Cyphers) and RBAC auditing for multi-tenant cloud platforms",
-                "Authored comprehensive technical documentation for automated workflows, reducing onboarding time by 40%"
+                "Authored comprehensive technical documentation for automated workflows"
             ]
         },
         education: {
@@ -116,7 +116,7 @@ const translations = {
                 "Conception de pipelines de réconciliation de données en Python pour vCenter, Morpheus CMP et ServiceNow ITSM",
                 "Développement d'outils de vérification de connectivité en masse basés sur Bash pour Windows/Linux",
                 "Mise en œuvre de la gestion des secrets (Cyphers) et de l'audit RBAC pour les plateformes cloud",
-                "Rédaction de documentation technique complète, réduisant le temps d'intégration de 40%"
+                "Rédaction de documentation technique complète"
             ]
         },
         education: {
