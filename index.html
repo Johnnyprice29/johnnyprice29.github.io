@@ -89,6 +89,13 @@
             <h2 class="section-title" data-i18n="section.projects">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
+                    <h3 data-i18n="project.cardRL.title">Robot Learning Projects</h3>
+                    <p data-i18n="project.cardRL.desc">A comprehensive collection of projects and exercises for the
+                        Robot Learning course, including Sim-to-Real extension, Q-Learning, and Policy Gradients.</p>
+                    <p class="project-tags">Reinforcement Learning · PPO · ADR · Sim-to-Real</p>
+                    <a href="#" class="project-link" data-rl-explore data-i18n="project.cardRL.link">Explore →</a>
+                </div>
+                <div class="project-card">
                     <h3>polito-aw1-2025-exams</h3>
                     <p data-i18n="project.card1.desc">Repository with exercises and projects for the Advanced Web
                         Applications 1 course (2025).</p>
@@ -283,6 +290,16 @@
             <p data-i18n="footer.rights">&copy; 2025 Johnprice Osagie. All rights reserved.</p>
         </div>
     </footer>
+
+    <div id="rl-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2 class="modal-title">Robot Learning Projects</h2>
+            <div id="rl-modal-grid" class="mini-projects-grid">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

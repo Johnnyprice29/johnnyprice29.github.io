@@ -18,6 +18,11 @@ const translations = {
         sectionTitles: { projects: "Progetti", experience: "Esperienza", education: "Istruzione", certs: "Certificazioni", skills: "Competenze" },
         projects: {
             card1: { desc: "Repository con esercizi e progetti del corso Advanced Web Applications 1 (2025).", link: "Visualizza →" },
+            cardRL: {
+                title: "Robot Learning Projects",
+                desc: "Collezione completa di progetti ed esercizi per il corso di Robot Learning, inclusi Sim-to-Real extension, Q-Learning e Policy Gradients.",
+                link: "Esplora →"
+            },
             card2: { desc: "Script Python e Bash per automazione di infrastrutture cloud e gestione multi-tenant.", link: "In sviluppo →" },
             card3: { desc: "Strumenti per verificare consistenza dati tra vCenter, Morpheus e ServiceNow.", link: "In sviluppo →" },
             card4: { desc: "Libreria Node.js per convertire Markdown in PDF con supporto KaTeX e stili professionali.", link: "Visualizza →" }
@@ -61,6 +66,11 @@ const translations = {
         sectionTitles: { projects: "Projects", experience: "Experience", education: "Education", certs: "Certifications", skills: "Skills" },
         projects: {
             card1: { desc: "Repository with exercises and projects for the Advanced Web Applications 1 course (2025).", link: "View →" },
+            cardRL: {
+                title: "Robot Learning Projects",
+                desc: "A comprehensive collection of projects and exercises for the Robot Learning course, including Sim-to-Real extension, Q-Learning, and Policy Gradients.",
+                link: "Explore →"
+            },
             card2: { desc: "Python and Bash scripts for cloud infrastructure automation and multi-tenant management.", link: "In development →" },
             card3: { desc: "Tools to verify data consistency between vCenter, Morpheus, and ServiceNow.", link: "In development →" },
             card4: { desc: "Node.js library to convert Markdown to PDF with KaTeX support and professional styling.", link: "View →" }
@@ -104,6 +114,11 @@ const translations = {
         sectionTitles: { projects: "Projets", experience: "Expérience", education: "Formation", certs: "Certifications", skills: "Compétences" },
         projects: {
             card1: { desc: "Dépôt avec exercices et projets du cours Advanced Web Applications 1 (2025).", link: "Voir →" },
+            cardRL: {
+                title: "Robot Learning Projects",
+                desc: "Une collection complète de projets et d'exercices pour le cours Robot Learning, y compris l'extension Sim-to-Real, le Q-Learning et les Policy Gradients.",
+                link: "Explorer →"
+            },
             card2: { desc: "Scripts Python et Bash pour l'automatisation de l'infrastructure cloud.", link: "En développement →" },
             card3: { desc: "Outils pour vérifier la cohérence des données entre vCenter, Morpheus et ServiceNow.", link: "En développement →" },
             card4: { desc: "Bibliothèque Node.js pour convertir Markdown en PDF avec support KaTeX.", link: "Voir →" }
@@ -138,6 +153,7 @@ const translations = {
 
 // ===== EXAM DATA =====
 const examsData = [
+    { level: "Magistrale", name: "Robot Learning", grade: "30/30" },
     // Triennale
     { level: "Triennale", name: "Lingua inglese I livello", grade: { it: "Superato", en: "Passed", fr: "Validé" } },
     { level: "Triennale", name: "Analisi matematica I", grade: "28/30" },
@@ -182,6 +198,15 @@ const examsData = [
     { level: "Erasmus", name: "Global Human Resources Management", grade: { it: "Convalidato", en: "Validated", fr: "Validé" } },
     { level: "Erasmus", name: "Cultural studies - Africa in global context", grade: { it: "Convalidato", en: "Validated", fr: "Validé" } },
     { level: "Erasmus", name: "Regional institutions and African business", grade: { it: "Convalidato", en: "Validated", fr: "Validé" } }
+];
+
+// ===== ROBOT LEARNING SUB-PROJECTS =====
+const rlProjectsData = [
+    { name: "Project Extension (Main)", desc: "Deep Reinforcement Learning extension using PPO and ADR for Sim-to-Real transfer.", link: "https://github.com/Johnnyprice29/project-extension" },
+    { name: "RL Fundamentals", desc: "Foundational Reinforcement Learning exercises and environment implementations.", link: "https://github.com/Johnnyprice29/exercise1-rl-fundamentals" },
+    { name: "Q-Learning", desc: "Implementation of Q-Learning algorithms for discrete state-space environments.", link: "https://github.com/Johnnyprice29/exercise2-qlearning" },
+    { name: "Policy Gradients", desc: "Advanced Policy Gradient methods and neural network policy optimization.", link: "https://github.com/Johnnyprice29/exercise3-policygradient" },
+    { name: "Sim-to-Real", desc: "Evaluation of domain randomization and system identification for robotic simulators.", link: "https://github.com/Johnnyprice29/exercise4-sim2real" }
 ];
 
 // ===== RENDER EXAMS =====
@@ -235,6 +260,9 @@ function setLanguage(lang) {
     setText('[data-i18n="section.skills"]', t.sectionTitles.skills);
 
     // Projects
+    setText('[data-i18n="project.cardRL.title"]', t.projects.cardRL.title);
+    setText('[data-i18n="project.cardRL.desc"]', t.projects.cardRL.desc);
+    setText('[data-i18n="project.cardRL.link"]', t.projects.cardRL.link);
     setText('[data-i18n="project.card1.desc"]', t.projects.card1.desc);
     setText('[data-i18n="project.card1.link"]', t.projects.card1.link);
     setText('[data-i18n="project.card2.desc"]', t.projects.card2.desc);
@@ -304,6 +332,41 @@ function setLanguage(lang) {
     const cvLinkSection = document.getElementById('cv-link-section');
     if (cvLinkHero) cvLinkHero.href = cvUrl;
     if (cvLinkSection) cvLinkSection.href = cvUrl;
+
+    // Update Modal Titles
+    const modalTitle = document.querySelector('.modal-title');
+    if (modalTitle) modalTitle.textContent = t.projects.cardRL.title;
+}
+
+// ===== MODAL LOGIC =====
+function openRLModal() {
+    const modal = document.getElementById('rl-modal');
+    const body = document.body;
+    const grid = document.getElementById('rl-modal-grid');
+
+    if (!modal || !grid) return;
+
+    grid.innerHTML = '';
+    rlProjectsData.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'mini-project-card';
+        card.innerHTML = `
+            <h4>${p.name}</h4>
+            <p>${p.desc}</p>
+            <a href="${p.link}" target="_blank" class="project-link">Repo →</a>
+        `;
+        grid.appendChild(card);
+    });
+
+    modal.classList.add('active');
+    body.style.overflow = 'hidden';
+}
+
+function closeRLModal() {
+    const modal = document.getElementById('rl-modal');
+    const body = document.body;
+    if (modal) modal.classList.remove('active');
+    body.style.overflow = 'auto';
 }
 
 // ===== INIT =====
@@ -312,6 +375,26 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
     });
+
+    // Modal close events
+    const closeBtn = document.querySelector('.close-modal');
+    if (closeBtn) closeBtn.addEventListener('click', closeRLModal);
+
+    const modalOverlay = document.getElementById('rl-modal');
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeRLModal();
+        });
+    }
+
+    // Robot Learning Explore Button
+    const exploreBtn = document.querySelector('[data-rl-explore]');
+    if (exploreBtn) {
+        exploreBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openRLModal();
+        });
+    }
 
     // Default language
     setLanguage('en');
