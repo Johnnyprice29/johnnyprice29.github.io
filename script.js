@@ -18,6 +18,11 @@ const translations = {
         sectionTitles: { projects: "Progetti", experience: "Esperienza", education: "Istruzione", certs: "Certificazioni", skills: "Competenze" },
         projects: {
             card1: { desc: "Repository con esercizi e progetti del corso Advanced Web Applications 1 (2025).", link: "Visualizza →" },
+            cardCS: {
+                title: "Cybersecurity Master",
+                desc: "Ecosistema interattivo di preparazione all'esame di Sicurezza dei Sistemi Informativi: quiz con 11 moduli, 161 flashcard (CyberFlash) e relazioni dei laboratori didattici.",
+                link: "Apri →"
+            },
             cardRL: {
                 title: "Robot Learning Projects",
                 desc: "Collezione completa di progetti ed esercizi per il corso di Robot Learning, inclusi Sim-to-Real extension, Q-Learning e Policy Gradients.",
@@ -66,6 +71,11 @@ const translations = {
         sectionTitles: { projects: "Projects", experience: "Experience", education: "Education", certs: "Certifications", skills: "Skills" },
         projects: {
             card1: { desc: "Repository with exercises and projects for the Advanced Web Applications 1 course (2025).", link: "View →" },
+            cardCS: {
+                title: "Cybersecurity Master",
+                desc: "Interactive exam preparation ecosystem for Information Systems Security: quiz with 11 modules, 161 flashcards (CyberFlash), and academic lab reports.",
+                link: "Open →"
+            },
             cardRL: {
                 title: "Robot Learning Projects",
                 desc: "A comprehensive collection of projects and exercises for the Robot Learning course, including Sim-to-Real extension, Q-Learning, and Policy Gradients.",
@@ -114,6 +124,11 @@ const translations = {
         sectionTitles: { projects: "Projets", experience: "Expérience", education: "Formation", certs: "Certifications", skills: "Compétences" },
         projects: {
             card1: { desc: "Dépôt avec exercices et projets du cours Advanced Web Applications 1 (2025).", link: "Voir →" },
+            cardCS: {
+                title: "Cybersecurity Master",
+                desc: "Ecosystème interactif de préparation à l'examen de Sécurité des Systèmes d'Information : quiz avec 11 modules, 161 flashcards (CyberFlash) et rapports de laboratoires académiques.",
+                link: "Ouvrir →"
+            },
             cardRL: {
                 title: "Robot Learning Projects",
                 desc: "Une collection complète de projets et d'exercices pour le cours Robot Learning, y compris l'extension Sim-to-Real, le Q-Learning et les Policy Gradients.",
@@ -265,6 +280,9 @@ function setLanguage(lang) {
     setText('[data-i18n="project.cardRL.title"]', t.projects.cardRL.title);
     setText('[data-i18n="project.cardRL.desc"]', t.projects.cardRL.desc);
     setText('[data-i18n="project.cardRL.link"]', t.projects.cardRL.link);
+    setText('[data-i18n="project.cardCS.title"]', t.projects.cardCS.title);
+    setText('[data-i18n="project.cardCS.desc"]', t.projects.cardCS.desc);
+    setText('[data-i18n="project.cardCS.link"]', t.projects.cardCS.link);
     setText('[data-i18n="project.card1.desc"]', t.projects.card1.desc);
     setText('[data-i18n="project.card1.link"]', t.projects.card1.link);
     setText('[data-i18n="project.card2.desc"]', t.projects.card2.desc);
