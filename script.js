@@ -181,6 +181,7 @@ const examsData = [
     { level: "Triennale", name: "Attività formative esterne", grade: { it: "Superato", en: "Passed", fr: "Validé" } },
     { level: "Triennale", name: "Prova finale", grade: { it: "Superato", en: "Passed", fr: "Validé" } },
     // Magistrale
+    { level: "Magistrale", name: { it: "Sicurezza dei Sistemi Informativi", en: "Information Systems Security", fr: "Sécurité des Systèmes d'Information" }, grade: "22/30" },
     { level: "Magistrale", name: "Big data processing and analytics", grade: "26/30" },
     { level: "Magistrale", name: "Data Science e Tecnologie per le Basi di Dati", grade: "27/30" },
     { level: "Magistrale", name: "Applicazioni Web I", grade: "27/30" },
@@ -221,8 +222,9 @@ function renderExams(lang) {
 
     examsData.forEach(exam => {
         const gradeStr = typeof exam.grade === 'object' ? exam.grade[lang] : exam.grade;
+        const nameStr = typeof exam.name === 'object' ? exam.name[lang] : exam.name;
         const li = document.createElement('li');
-        li.innerHTML = `<span>${exam.name}</span><span class="grade">${gradeStr}</span>`;
+        li.innerHTML = `<span>${nameStr}</span><span class="grade">${gradeStr}</span>`;
         if (lists[exam.level]) lists[exam.level].appendChild(li);
     });
 }
