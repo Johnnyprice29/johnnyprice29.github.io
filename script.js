@@ -225,6 +225,13 @@ const rlProjectsData = [
     { name: "Sim-to-Real", desc: "Evaluation of domain randomization and system identification for robotic simulators.", link: "https://github.com/Johnnyprice29/exercise4-sim2real" }
 ];
 
+// ===== CS PROJECT DATA =====
+const csProjectsData = [
+    { name: "🎯 Cybersecurity Quiz", desc: "Interactive quiz with 11 thematic modules (Cryptography, Authentication, Protocols…) and error-tracking mode.", link: "https://johnnyprice29.github.io/cybersecurity/quiz_cybersecurity.html" },
+    { name: "🃏 CyberFlash Flashcards", desc: "161 interactive flashcards on key topics: Sniffing, Spoofing, Hijacking, APT. Filterable by source.", link: "https://johnnyprice29.github.io/cybersecurity/flashcards_esami.html" },
+    { name: "📄 Academic Lab Reports", desc: "Hub of cybersecurity lab reports (LaTeX + PDF): Operation Shady RAT, Web Authentication, and more.", link: "https://johnnyprice29.github.io/cybersecurity/academic_reports_it.html" }
+];
+
 // ===== RENDER EXAMS =====
 function renderExams(lang) {
     const lists = {
@@ -389,6 +396,33 @@ function closeRLModal() {
     body.style.overflow = 'auto';
 }
 
+function openCSModal() {
+    const modal = document.getElementById('cs-modal');
+    const body = document.body;
+    const grid = document.getElementById('cs-modal-grid');
+    if (!modal || !grid) return;
+    grid.innerHTML = '';
+    csProjectsData.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'mini-project-card';
+        card.innerHTML = `
+            <h4>${p.name}</h4>
+            <p>${p.desc}</p>
+            <a href="${p.link}" target="_blank" class="project-link">Open →</a>
+        `;
+        grid.appendChild(card);
+    });
+    modal.classList.add('active');
+    body.style.overflow = 'hidden';
+}
+
+function closeCSModal() {
+    const modal = document.getElementById('cs-modal');
+    const body = document.body;
+    if (modal) modal.classList.remove('active');
+    body.style.overflow = 'auto';
+}
+
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
     // Language buttons
@@ -415,6 +449,24 @@ document.addEventListener('DOMContentLoaded', () => {
             openRLModal();
         });
     }
+
+    // Cybersecurity Explore Button
+    const csExploreBtn = document.querySelector('[data-cs-explore]');
+    if (csExploreBtn) {
+        csExploreBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openCSModal();
+        });
+    }
+
+    const csModal = document.getElementById('cs-modal');
+    if (csModal) {
+        csModal.addEventListener('click', (e) => {
+            if (e.target === csModal) closeCSModal();
+        });
+    }
+    const closeCSBtn = document.querySelector('.close-modal-cs');
+    if (closeCSBtn) closeCSBtn.addEventListener('click', closeCSModal);
 
     // Default language
     setLanguage('en');
