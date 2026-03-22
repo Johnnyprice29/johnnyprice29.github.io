@@ -23,6 +23,11 @@ const translations = {
                 desc: "Ecosistema interattivo di preparazione all'esame di Sicurezza dei Sistemi Informativi: quiz con 11 moduli, 161 flashcard (CyberFlash) e relazioni dei laboratori didattici.",
                 link: "Apri →"
             },
+            cardLLM: {
+                title: "LLM for Software Engineering",
+                desc: "Progetto accademico in corso per l'impiego di Large Language Models nel Software Engineering (LLM4SE).",
+                link: "Codice GitHub →"
+            },
             cardRL: {
                 title: "Robot Learning Projects",
                 desc: "Collezione completa di progetti ed esercizi per il corso di Robot Learning, inclusi Sim-to-Real extension, Q-Learning e Policy Gradients.",
@@ -40,7 +45,7 @@ const translations = {
                 "Ingegnerizzazione pipeline di riconciliazione dati in Python per verificare consistenza tra vCenter, Morpheus CMP e ServiceNow ITSM",
                 "Sviluppo strumenti di verifica connettività massiva basati su Bash usando netcat e ping per ambienti Windows/Linux",
                 "Implementazione Secret Management (Cyphers) e auditing RBAC per piattaforme cloud multi-tenant",
-                "Redazione documentazione tecnica completa per workflow automatizzati"
+                "Sviluppo Tesi Magistrale (in corso): progettazione di un'architettura Token-Efficient basata su Model Context Protocol (MCP) per l'interazione conversazionale tra Large Language Models e ServiceNow CMDB"
             ]
         },
         education: {
@@ -76,6 +81,11 @@ const translations = {
                 desc: "Interactive exam preparation ecosystem for Information Systems Security: quiz with 11 modules, 161 flashcards (CyberFlash), and academic lab reports.",
                 link: "Open →"
             },
+            cardLLM: {
+                title: "LLM for Software Engineering",
+                desc: "Ongoing academic project on applying Large Language Models to Software Engineering (LLM4SE).",
+                link: "GitHub Source →"
+            },
             cardRL: {
                 title: "Robot Learning Projects",
                 desc: "A comprehensive collection of projects and exercises for the Robot Learning course, including Sim-to-Real extension, Q-Learning, and Policy Gradients.",
@@ -93,7 +103,7 @@ const translations = {
                 "Engineered data reconciliation pipelines in Python to verify consistency between vCenter, Morpheus CMP, and ServiceNow ITSM",
                 "Developed Bash-based bulk connectivity verification tools using netcat and ping for Windows/Linux environments",
                 "Implemented Secret Management (Cyphers) and RBAC auditing for multi-tenant cloud platforms",
-                "Authored comprehensive technical documentation for automated workflows"
+                "Master Thesis (ongoing): designing a Token-Efficient architecture based on Model Context Protocol (MCP) for conversational integration between Large Language Models and ServiceNow CMDB"
             ]
         },
         education: {
@@ -129,6 +139,11 @@ const translations = {
                 desc: "Ecosystème interactif de préparation à l'examen de Sécurité des Systèmes d'Information : quiz avec 11 modules, 161 flashcards (CyberFlash) et rapports de laboratoires académiques.",
                 link: "Ouvrir →"
             },
+            cardLLM: {
+                title: "LLM for Software Engineering",
+                desc: "Projet académique en cours sur l'application des Large Language Models au Software Engineering (LLM4SE).",
+                link: "Code GitHub →"
+            },
             cardRL: {
                 title: "Robot Learning Projects",
                 desc: "Une collection complète de projets et d'exercices pour le cours Robot Learning, y compris l'extension Sim-to-Real, le Q-Learning et les Policy Gradients.",
@@ -146,7 +161,7 @@ const translations = {
                 "Conception de pipelines de réconciliation de données en Python pour vCenter, Morpheus CMP et ServiceNow ITSM",
                 "Développement d'outils de vérification de connectivité en masse basés sur Bash pour Windows/Linux",
                 "Mise en œuvre de la gestion des secrets (Cyphers) et de l'audit RBAC pour les plateformes cloud",
-                "Rédaction de documentation technique complète"
+                "Thèse de Master (en cours) : conception d'une architecture Token-Efficient basée sur Model Context Protocol (MCP) pour l'intégration conversationnelle entre Large Language Models et ServiceNow CMDB"
             ]
         },
         education: {
@@ -203,6 +218,9 @@ const examsData = [
     { level: "Magistrale", name: "Tecnologie e servizi di rete", grade: "26/30" },
     { level: "Magistrale", name: "Ingegneria del software", grade: "30/30" },
     { level: "Magistrale", name: "Bioinformatics", grade: "29/30" },
+    { level: "Magistrale", name: "Large Language Models for Software Engineering (LLM4SE)", grade: { it: "In corso", en: "In progress", fr: "En cours" } },
+    { level: "Magistrale", name: "Advanced Machine Learning", grade: { it: "In corso", en: "In progress", fr: "En cours" } },
+    { level: "Magistrale", name: { it: "Programmazione di sistema", en: "System Programming", fr: "Programmation Système" }, grade: { it: "In corso", en: "In progress", fr: "En cours" } },
     // Erasmus
     { level: "Erasmus", name: "Entrepreneurship", grade: { it: "Convalidato", en: "Validated", fr: "Validé" } },
     { level: "Erasmus", name: "Français semestre 2", grade: { it: "Convalidato", en: "Validated", fr: "Validé" } },
@@ -290,6 +308,9 @@ function setLanguage(lang) {
     setText('[data-i18n="project.cardCS.title"]', t.projects.cardCS.title);
     setText('[data-i18n="project.cardCS.desc"]', t.projects.cardCS.desc);
     setText('[data-i18n="project.cardCS.link"]', t.projects.cardCS.link);
+    setText('[data-i18n="project.cardLLM.title"]', t.projects.cardLLM.title);
+    setText('[data-i18n="project.cardLLM.desc"]', t.projects.cardLLM.desc);
+    setText('[data-i18n="project.cardLLM.link"]', t.projects.cardLLM.link);
     setText('[data-i18n="project.card1.desc"]', t.projects.card1.desc);
     setText('[data-i18n="project.card1.link"]', t.projects.card1.link);
     setText('[data-i18n="project.card2.desc"]', t.projects.card2.desc);
