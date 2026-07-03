@@ -28,6 +28,11 @@ const translations = {
                 desc: "Progetto accademico in corso per l'impiego di Large Language Models nel Software Engineering (LLM4SE).",
                 link: "Codice GitHub →"
             },
+            cardAML: {
+                title: "Semantic Correspondence with Vision Transformers",
+                desc: "Specializzazione del modello visual foundation DINOv2 per allineamenti precisi a livello di pixel (semantic correspondence) con tecniche PEFT (LoRA, BitFit) e Segment Anything (SAM).",
+                link: "Codice GitHub →"
+            },
             cardRL: {
                 title: "Robot Learning Projects",
                 desc: "Collezione completa di progetti ed esercizi per il corso di Robot Learning, inclusi Sim-to-Real extension, Q-Learning e Policy Gradients.",
@@ -86,6 +91,11 @@ const translations = {
                 desc: "Ongoing academic project on applying Large Language Models to Software Engineering (LLM4SE).",
                 link: "GitHub Source →"
             },
+            cardAML: {
+                title: "Semantic Correspondence with Vision Transformers",
+                desc: "Specialization of the DINOv2 visual foundation model for robust and sub-pixel accurate semantic correspondence, using PEFT techniques (LoRA, BitFit) and Segment Anything (SAM).",
+                link: "GitHub Source →"
+            },
             cardRL: {
                 title: "Robot Learning Projects",
                 desc: "A comprehensive collection of projects and exercises for the Robot Learning course, including Sim-to-Real extension, Q-Learning, and Policy Gradients.",
@@ -142,6 +152,11 @@ const translations = {
             cardLLM: {
                 title: "LLM for Software Engineering",
                 desc: "Projet académique en cours sur l'application des Large Language Models au Software Engineering (LLM4SE).",
+                link: "Code GitHub →"
+            },
+            cardAML: {
+                title: "Semantic Correspondence with Vision Transformers",
+                desc: "Spécialisation du modèle visuel DINOv2 pour une correspondance sémantique robuste et précise au sous-pixel près, en utilisant les techniques PEFT (LoRA, BitFit) et Segment Anything (SAM).",
                 link: "Code GitHub →"
             },
             cardRL: {
@@ -311,6 +326,9 @@ function setLanguage(lang) {
     setText('[data-i18n="project.cardLLM.title"]', t.projects.cardLLM.title);
     setText('[data-i18n="project.cardLLM.desc"]', t.projects.cardLLM.desc);
     setText('[data-i18n="project.cardLLM.link"]', t.projects.cardLLM.link);
+    setText('[data-i18n="project.cardAML.title"]', t.projects.cardAML.title);
+    setText('[data-i18n="project.cardAML.desc"]', t.projects.cardAML.desc);
+    setText('[data-i18n="project.cardAML.link"]', t.projects.cardAML.link);
     setText('[data-i18n="project.card1.desc"]', t.projects.card1.desc);
     setText('[data-i18n="project.card1.link"]', t.projects.card1.link);
     setText('[data-i18n="project.card2.desc"]', t.projects.card2.desc);
