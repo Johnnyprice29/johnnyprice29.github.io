@@ -25,7 +25,7 @@ const translations = {
             },
             cardLLM: {
                 title: "LLM for Software Engineering",
-                desc: "Progetto accademico in corso per l'impiego di Large Language Models nel Software Engineering (LLM4SE).",
+                desc: "Generazione collaborativa di test case tramite architetture multi-agente (Actor-Critic, Adversarial, Swarm) valutata su modelli Gemma e benchmark di code coverage.",
                 link: "Codice GitHub →"
             },
             cardAML: {
@@ -40,11 +40,14 @@ const translations = {
             },
             card2: { desc: "Script Python e Bash per automazione di infrastrutture cloud e gestione multi-tenant.", link: "In sviluppo →" },
             card3: { desc: "Strumenti per verificare consistenza dati tra vCenter, Morpheus e ServiceNow.", link: "In sviluppo →" },
-            card4: { desc: "Libreria Node.js per convertire Markdown in PDF con supporto KaTeX e stili professionali.", link: "Visualizza →" }
+            card4: { desc: "Libreria Node.js per convertire Markdown in PDF con supporto KaTeX e stili professionali.", link: "Visualizza →" },
+            cardCDG: { desc: "CloudSketch AI: trasforma testo in diagrammi architetturali multi-cloud (AWS, Azure, GCP) usando Google Gemini. Include export draw.io e rendering SVG nativo.", link: "Lavori in corso (GitHub) →" },
+            cardJSON: { desc: "Libreria Python avanzata per analizzare struttura, coerenza e qualità di JSON complessi. Integra collasso dinamico delle mappe (AI-Native) per ridurre l'uso di token negli LLM.", link: "Lavori in corso (GitHub) →" },
+            cardDrone: { desc: "Progetto di Object Detection per l'agricoltura di precisione (es. raccolta frutta con droni), ottimizzato per inferenza su hardware edge e addestramento in cloud.", link: "Lavori in corso (GitHub) →" }
         },
         experience: {
             role: "Cloud Consultant (Part-time)",
-            period: "2023 - Presente",
+            period: "2024 - Presente",
             bullets: [
                 "Automazione flussi di provisioning utenti usando script Python per interagire con API Morpheus Data, riducendo overhead manuale dell'80%",
                 "Ingegnerizzazione pipeline di riconciliazione dati in Python per verificare consistenza tra vCenter, Morpheus CMP e ServiceNow ITSM",
@@ -88,7 +91,7 @@ const translations = {
             },
             cardLLM: {
                 title: "LLM for Software Engineering",
-                desc: "Ongoing academic project on applying Large Language Models to Software Engineering (LLM4SE).",
+                desc: "Collaborative test case generation using multi-agent architectures (Actor-Critic, Adversarial, Swarm) evaluated on Gemma models and code coverage benchmarks.",
                 link: "GitHub Source →"
             },
             cardAML: {
@@ -103,11 +106,14 @@ const translations = {
             },
             card2: { desc: "Python and Bash scripts for cloud infrastructure automation and multi-tenant management.", link: "In development →" },
             card3: { desc: "Tools to verify data consistency between vCenter, Morpheus, and ServiceNow.", link: "In development →" },
-            card4: { desc: "Node.js library to convert Markdown to PDF with KaTeX support and professional styling.", link: "View →" }
+            card4: { desc: "Node.js library to convert Markdown to PDF with KaTeX support and professional styling.", link: "View →" },
+            cardCDG: { desc: "CloudSketch AI: translates natural language into interactive multi-cloud (AWS, Azure, GCP) architecture diagrams using Google Gemini, with draw.io export.", link: "Work in progress (GitHub) →" },
+            cardJSON: { desc: "Advanced Python library to profile the structure and data quality of complex JSONs. Includes AI-native dynamic map collapse for massive LLM token reduction.", link: "Work in progress (GitHub) →" },
+            cardDrone: { desc: "Object detection system for precision agriculture (e.g., drone fruit picking), optimized for high-speed edge inference and scalable cloud training.", link: "Work in progress (GitHub) →" }
         },
         experience: {
             role: "Cloud Consultant (Part-time)",
-            period: "2023 - Present",
+            period: "2024 - Present",
             bullets: [
                 "Automated user provisioning workflows using Python scripting to interact with Morpheus Data API, reducing manual overhead by 80%",
                 "Engineered data reconciliation pipelines in Python to verify consistency between vCenter, Morpheus CMP, and ServiceNow ITSM",
@@ -151,7 +157,7 @@ const translations = {
             },
             cardLLM: {
                 title: "LLM for Software Engineering",
-                desc: "Projet académique en cours sur l'application des Large Language Models au Software Engineering (LLM4SE).",
+                desc: "Génération collaborative de cas de test via des architectures multi-agents (Actor-Critic, Adversarial, Swarm) évaluée sur des modèles Gemma et des benchmarks de couverture de code.",
                 link: "Code GitHub →"
             },
             cardAML: {
@@ -166,11 +172,14 @@ const translations = {
             },
             card2: { desc: "Scripts Python et Bash pour l'automatisation de l'infrastructure cloud.", link: "En développement →" },
             card3: { desc: "Outils pour vérifier la cohérence des données entre vCenter, Morpheus et ServiceNow.", link: "En développement →" },
-            card4: { desc: "Bibliothèque Node.js pour convertir Markdown en PDF avec support KaTeX.", link: "Voir →" }
+            card4: { desc: "Bibliothèque Node.js pour convertir Markdown en PDF avec support KaTeX.", link: "Voir →" },
+            cardCDG: { desc: "CloudSketch AI : transforme le texte en diagrammes d'architecture multi-cloud (AWS, Azure, GCP) avec Google Gemini et export draw.io.", link: "Travail en cours (GitHub) →" },
+            cardJSON: { desc: "Bibliothèque Python avancée pour l'analyse de structure et la qualité des données JSON, avec réduction des tokens (AI-native) pour les LLM.", link: "Travail en cours (GitHub) →" },
+            cardDrone: { desc: "Système de détection d'objets pour l'agriculture de précision par drone, optimisé pour l'inférence rapide sur matériel edge.", link: "Travail en cours (GitHub) →" }
         },
         experience: {
             role: "Consultant Cloud (Temps partiel)",
-            period: "2023 - Présent",
+            period: "2024 - Présent",
             bullets: [
                 "Automatisation des flux de provisionnement utilisateurs via scripts Python avec l'API Morpheus Data, réduisant les tâches manuelles de 80%",
                 "Conception de pipelines de réconciliation de données en Python pour vCenter, Morpheus CMP et ServiceNow ITSM",
@@ -233,8 +242,8 @@ const examsData = [
     { level: "Magistrale", name: "Tecnologie e servizi di rete", grade: "26/30" },
     { level: "Magistrale", name: "Ingegneria del software", grade: "30/30" },
     { level: "Magistrale", name: "Bioinformatics", grade: "29/30" },
-    { level: "Magistrale", name: "Large Language Models for Software Engineering (LLM4SE)", grade: { it: "In corso", en: "In progress", fr: "En cours" } },
-    { level: "Magistrale", name: "Advanced Machine Learning", grade: { it: "In corso", en: "In progress", fr: "En cours" } },
+    { level: "Magistrale", name: "Large Language Models for Software Engineering (LLM4SE)", grade: "28/30" },
+    { level: "Magistrale", name: "Advanced Machine Learning", grade: "26/30" },
     { level: "Magistrale", name: { it: "Programmazione di sistema", en: "System Programming", fr: "Programmation Système" }, grade: { it: "In corso", en: "In progress", fr: "En cours" } },
     // Erasmus
     { level: "Erasmus", name: "Entrepreneurship", grade: { it: "Convalidato", en: "Validated", fr: "Validé" } },
