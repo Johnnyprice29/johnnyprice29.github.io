@@ -87,80 +87,116 @@
     <section id="progetti" class="projects">
         <div class="container">
             <h2 class="section-title" data-i18n="section.projects">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3 data-i18n="project.cardRL.title">Robot Learning Projects</h3>
-                    <p data-i18n="project.cardRL.desc">A comprehensive collection of projects and exercises for the
-                        Robot Learning course, including Sim-to-Real extension, Q-Learning, and Policy Gradients.</p>
-                    <p class="project-tags">Reinforcement Learning · PPO · ADR · Sim-to-Real</p>
-                    <a href="#" class="project-link" data-rl-explore data-i18n="project.cardRL.link">Explore →</a>
+
+            <!-- Work-Related / Enterprise Projects -->
+            <div class="project-subsection">
+                <h3 class="subsection-title" data-i18n="section.workProjects">Work-Related Projects</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3 data-i18n="project.cardCMP.title">Enterprise CMP & Multi-Engine Automation</h3>
+                        <p data-i18n="project.cardCMP.desc">End-to-end lifecycle engineering and automation for
+                            enterprise infrastructure, Application Servers, and multi-engine databases on AWS and HPE
+                            Morpheus CMP.</p>
+                        <p class="project-tags">HPE Morpheus CMP · AWS · Chef · Bash / PowerShell · Multi-Engine DB</p>
+                        <a href="#" class="project-link" data-cmp-explore data-i18n="project.cardCMP.link">Case Study
+                            →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3 data-i18n="project.card3.title">Data Reconciliation Tools</h3>
+                        <p data-i18n="project.card3.desc">Tools to verify data consistency between vCenter, Morpheus,
+                            and
+                            ServiceNow.</p>
+                        <p class="project-tags">Python · Data Integrity · APIs · Bash</p>
+                        <a href="#" class="project-link" data-i18n="project.card3.link">In development →</a>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3 data-i18n="project.cardCS.title">Cybersecurity Master</h3>
-                    <p data-i18n="project.cardCS.desc">Interactive exam preparation ecosystem for Information Systems
-                        Security: quiz with 11 modules, 161 flashcards (CyberFlash), and academic lab reports.</p>
-                    <p class="project-tags">Cybersecurity · HTML/JS · Flashcards · Quiz</p>
-                    <a href="#" class="project-link" data-cs-explore data-i18n="project.cardCS.link">Open →</a>
-                </div>
-                <div class="project-card">
-                    <h3 data-i18n="project.cardLLM.title">LLM for Software Engineering</h3>
-                    <p data-i18n="project.cardLLM.desc">Collaborative test case generation using multi-agent architectures (Actor-Critic, Adversarial, Swarm) evaluated on Gemma models and code coverage benchmarks.</p>
-                    <p class="project-tags">LLM · Agentic AI · Multi-Agent · Python</p>
-                    <a href="https://github.com/LLMProjectPolito/LLMProject" target="_blank" class="project-link" data-i18n="project.cardLLM.link">GitHub Source →</a>
-                </div>
-                <div class="project-card">
-                    <h3 data-i18n="project.cardAML.title">Semantic Correspondence with Vision Transformers</h3>
-                    <p data-i18n="project.cardAML.desc">Specializing DINOv2 visual foundation model for robust, sub-pixel accurate semantic correspondence matching using LoRA, BitFit and Segment Anything (SAM).</p>
-                    <p class="project-tags">Vision Transformers · DINOv2 · PEFT (LoRA) · PyTorch</p>
-                    <a href="https://github.com/Johnnyprice29/Project_AML" target="_blank" class="project-link" data-i18n="project.cardAML.link">GitHub Source →</a>
-                </div>
-                <div class="project-card">
-                    <h3>polito-aw1-2025-exams</h3>
-                    <p data-i18n="project.card1.desc">Repository with exercises and projects for the Advanced Web
-                        Applications 1 course (2025).</p>
-                    <p class="project-tags">React · JavaScript · Web Development</p>
-                    <a href="https://github.com/Johnnyprice29/esame1-gioco-sfortuna" target="_blank"
-                        class="project-link" data-i18n="project.card1.link">View →</a>
-                </div>
-                <div class="project-card">
-                    <h3>md-katex-pdf</h3>
-                    <p data-i18n="project.card4.desc">Node.js library to convert Markdown to PDF with KaTeX support and
-                        professional styling.</p>
-                    <p class="project-tags">Node.js · Playwright · PDF Generation</p>
-                    <a href="https://github.com/Johnnyprice29/md-katex-pdf" target="_blank" class="project-link"
-                        data-i18n="project.card4.link">View →</a>
-                </div>
-                <div class="project-card">
-                    <h3>Cloud Infrastructure Automation</h3>
-                    <p data-i18n="project.card2.desc">Python and Bash scripts for cloud infrastructure automation and
-                        multi-tenant management.</p>
-                    <p class="project-tags">Python · Bash · Cloud · Automation</p>
-                    <a href="#" class="project-link" data-i18n="project.card2.link">In development →</a>
-                </div>
-                <div class="project-card">
-                    <h3>Data Reconciliation Tools</h3>
-                    <p data-i18n="project.card3.desc">Tools to verify data consistency between vCenter, Morpheus, and
-                        ServiceNow.</p>
-                    <p class="project-tags">Python · Data Integrity · APIs</p>
-                    <a href="#" class="project-link" data-i18n="project.card3.link">In development →</a>
-                </div>
-                <div class="project-card">
-                    <h3>Cloud Diagrams Generator</h3>
-                    <p data-i18n="project.cardCDG.desc">App for generating Cloud architecture diagrams using LLMs.</p>
-                    <p class="project-tags">React · Node.js · Cloud</p>
-                    <a href="https://github.com/Johnnyprice29/Cloud-Diagrams-Generator" target="_blank" class="project-link" data-i18n="project.cardCDG.link">In development (GitHub) →</a>
-                </div>
-                <div class="project-card">
-                    <h3>JSON Analyser</h3>
-                    <p data-i18n="project.cardJSON.desc">Analysis and validation tool for complex JSON files.</p>
-                    <p class="project-tags">JavaScript · JSON · Parsing</p>
-                    <a href="https://github.com/Johnnyprice29/Json-Analyser" target="_blank" class="project-link" data-i18n="project.cardJSON.link">In development (GitHub) →</a>
-                </div>
-                <div class="project-card">
-                    <h3>Agritech Drone Vision</h3>
-                    <p data-i18n="project.cardDrone.desc">Computer vision system for drones applied to precision agriculture.</p>
-                    <p class="project-tags">Python · Computer Vision · Drone</p>
-                    <a href="https://github.com/Johnnyprice29/agritech-drone-vision" target="_blank" class="project-link" data-i18n="project.cardDrone.link">In development (GitHub) →</a>
+            </div>
+
+            <!-- Academic & Personal Projects -->
+            <div class="project-subsection">
+                <h3 class="subsection-title" data-i18n="section.academicProjects">Academic & Personal Projects</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3 data-i18n="project.cardRL.title">Robot Learning Projects</h3>
+                        <p data-i18n="project.cardRL.desc">A comprehensive collection of projects and exercises for the
+                            Robot Learning course, including Sim-to-Real extension, Q-Learning, and Policy Gradients.
+                        </p>
+                        <p class="project-tags">Reinforcement Learning · PPO · ADR · Sim-to-Real</p>
+                        <a href="#" class="project-link" data-rl-explore data-i18n="project.cardRL.link">Explore →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3 data-i18n="project.cardCS.title">Cybersecurity Master</h3>
+                        <p data-i18n="project.cardCS.desc">Interactive exam preparation ecosystem for Information
+                            Systems
+                            Security: quiz with 11 modules, 161 flashcards (CyberFlash), and academic lab reports.</p>
+                        <p class="project-tags">Cybersecurity · HTML/JS · Flashcards · Quiz</p>
+                        <a href="#" class="project-link" data-cs-explore data-i18n="project.cardCS.link">Open →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3 data-i18n="project.cardLLM.title">LLM for Software Engineering</h3>
+                        <p data-i18n="project.cardLLM.desc">Collaborative test case generation using multi-agent
+                            architectures (Actor-Critic, Adversarial, Swarm) evaluated on Gemma models and code coverage
+                            benchmarks.</p>
+                        <p class="project-tags">LLM · Agentic AI · Multi-Agent · Python</p>
+                        <a href="https://github.com/LLMProjectPolito/LLMProject" target="_blank" class="project-link"
+                            data-i18n="project.cardLLM.link">GitHub Source →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3 data-i18n="project.cardAML.title">Semantic Correspondence with Vision Transformers</h3>
+                        <p data-i18n="project.cardAML.desc">Specializing DINOv2 visual foundation model for robust,
+                            sub-pixel accurate semantic correspondence matching using LoRA, BitFit and Segment Anything
+                            (SAM).</p>
+                        <p class="project-tags">Vision Transformers · DINOv2 · PEFT (LoRA) · PyTorch</p>
+                        <a href="https://github.com/Johnnyprice29/Project_AML" target="_blank" class="project-link"
+                            data-i18n="project.cardAML.link">GitHub Source →</a>
+                    </div>
+                    <div class="project-card project-card-thesis">
+                        <span class="thesis-badge-pill" data-i18n="project.cardThesis.badge">🎓 M.Sc. Thesis · IDSIA USI-SUPSI</span>
+                        <h3 data-i18n="project.cardThesis.title">HRC Intelligent Design Assistant</h3>
+                        <p data-i18n="project.cardThesis.desc">Development of an intelligent LLM-driven assistant and interactive 3D WebGL (Three.js) simulation for designing and validating human-robot collaborative (HRC) industrial cells. Integrates RAG over safety standards (ISO/TS 15066) and automated validation algorithms.</p>
+                        <p class="project-tags">LLM · RAG (ISO/TS 15066) · Three.js / WebGL · Human-Robot Collaboration · IDSIA</p>
+                        <a href="https://github.com/Johnnyprice29" target="_blank" class="project-link" data-i18n="project.cardThesis.link">In progress →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>polito-aw1-2025-exams</h3>
+                        <p data-i18n="project.card1.desc">Repository with exercises and projects for the Advanced Web
+                            Applications 1 course (2025).</p>
+                        <p class="project-tags">React · JavaScript · Web Development</p>
+                        <a href="https://github.com/Johnnyprice29/esame1-gioco-sfortuna" target="_blank"
+                            class="project-link" data-i18n="project.card1.link">View →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>md-katex-pdf</h3>
+                        <p data-i18n="project.card4.desc">Node.js library to convert Markdown to PDF with KaTeX support
+                            and
+                            professional styling.</p>
+                        <p class="project-tags">Node.js · Playwright · PDF Generation</p>
+                        <a href="https://github.com/Johnnyprice29/md-katex-pdf" target="_blank" class="project-link"
+                            data-i18n="project.card4.link">View →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Cloud Diagrams Generator</h3>
+                        <p data-i18n="project.cardCDG.desc">App for generating Cloud architecture diagrams using LLMs.
+                        </p>
+                        <p class="project-tags">React · Node.js · Cloud</p>
+                        <a href="https://github.com/Johnnyprice29/Cloud-Diagrams-Generator" target="_blank"
+                            class="project-link" data-i18n="project.cardCDG.link">In development (GitHub) →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>JSON Analyser</h3>
+                        <p data-i18n="project.cardJSON.desc">Analysis and validation tool for complex JSON files.</p>
+                        <p class="project-tags">JavaScript · JSON · Parsing</p>
+                        <a href="https://github.com/Johnnyprice29/Json-Analyser" target="_blank" class="project-link"
+                            data-i18n="project.cardJSON.link">In development (GitHub) →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Agritech Drone Vision</h3>
+                        <p data-i18n="project.cardDrone.desc">Computer vision system for drones applied to precision
+                            agriculture.</p>
+                        <p class="project-tags">Python · Computer Vision · Drone</p>
+                        <a href="https://github.com/Johnnyprice29/agritech-drone-vision" target="_blank"
+                            class="project-link" data-i18n="project.cardDrone.link">In development (GitHub) →</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -295,7 +331,7 @@
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3 data-i18n="skills.lang">Programming Languages</h3>
-                    <p>Python, JavaScript, Bash, SQL, Java, Rust (base)</p>
+                    <p>Python, JavaScript, C, Assembly (ARM, MIPS, RISC-V), Bash, SQL, Java, Rust</p>
                 </div>
                 <div class="skill-category">
                     <h3 data-i18n="skills.cloud">Cloud & Infrastructure</h3>
@@ -343,6 +379,22 @@
             <button class="close-modal close-modal-cs">&times;</button>
             <h2 class="modal-title" data-i18n="project.cardCS.title">Cybersecurity Master</h2>
             <div id="cs-modal-grid" class="mini-projects-grid">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CMP Cloud Case Study Modal -->
+    <div id="cmp-modal" class="modal-overlay">
+        <div class="modal-content case-study-modal-content">
+            <button class="close-modal close-modal-cmp">&times;</button>
+            <div class="case-study-header">
+                <span class="case-study-badge">Enterprise Case Study</span>
+                <h2 class="modal-title" id="cmp-modal-title" style="margin-bottom: 0.5rem;">Enterprise CMP &
+                    Multi-Engine Automation</h2>
+                <p id="cmp-modal-subtitle" class="case-study-subtitle"></p>
+            </div>
+            <div id="cmp-modal-grid" class="case-study-grid">
                 <!-- Injected via JS -->
             </div>
         </div>

@@ -15,8 +15,21 @@ const translations = {
             btnProjects: "Scopri Progetti",
             btnCV: "Scarica CV"
         },
-        sectionTitles: { projects: "Progetti", experience: "Esperienza", education: "Istruzione", certs: "Certificazioni", skills: "Competenze" },
+        sectionTitles: {
+            projects: "Progetti",
+            workProjects: "Progetti Professionali ed Enterprise",
+            academicProjects: "Progetti Accademici e Personali",
+            experience: "Esperienza",
+            education: "Istruzione",
+            certs: "Certificazioni",
+            skills: "Competenze"
+        },
         projects: {
+            cardCMP: {
+                title: "Enterprise CMP & Multi-Engine Automation",
+                desc: "Ingegnerizzazione e automazione end-to-end del ciclo di vita per infrastrutture enterprise, Application Server e database multi-engine su AWS e piattaforma HPE Morpheus CMP.",
+                link: "Case Study →"
+            },
             card1: { desc: "Repository con esercizi e progetti del corso Advanced Web Applications 1 (2025).", link: "Visualizza →" },
             cardCS: {
                 title: "Cybersecurity Master",
@@ -33,13 +46,22 @@ const translations = {
                 desc: "Specializzazione del modello visual foundation DINOv2 per allineamenti precisi a livello di pixel (semantic correspondence) con tecniche PEFT (LoRA, BitFit) e Segment Anything (SAM).",
                 link: "Codice GitHub →"
             },
+            cardThesis: {
+                badge: "🎓 Tesi Magistrale · IDSIA (USI-SUPSI) · In corso",
+                title: "HRC Intelligent Design Assistant",
+                desc: "Sviluppo di un assistente intelligente basato su LLM e simulazione 3D (Three.js/WebGL) per supportare la progettazione e validazione di celle industriali collaborative uomo-robot (HRC). Include architettura RAG su normative di sicurezza (ISO/TS 15066) ed ergonomia per self-planning e task allocation, e algoritmi per la validazione automatica di safety e tempi ciclo.",
+                link: "In svolgimento →"
+            },
             cardRL: {
                 title: "Robot Learning Projects",
                 desc: "Collezione completa di progetti ed esercizi per il corso di Robot Learning, inclusi Sim-to-Real extension, Q-Learning e Policy Gradients.",
                 link: "Esplora →"
             },
-            card2: { desc: "Script Python e Bash per automazione di infrastrutture cloud e gestione multi-tenant.", link: "In sviluppo →" },
-            card3: { desc: "Strumenti per verificare consistenza dati tra vCenter, Morpheus e ServiceNow.", link: "In sviluppo →" },
+            card3: {
+                title: "Data Reconciliation Tools",
+                desc: "Pipeline di riconciliazione dati in Python per verificare consistenza tra vCenter, Morpheus e ServiceNow ITSM, con tool Bash per verifica connettività di 500+ endpoint.",
+                link: "In sviluppo →"
+            },
             card4: { desc: "Libreria Node.js per convertire Markdown in PDF con supporto KaTeX e stili professionali.", link: "Visualizza →" },
             cardCDG: { desc: "CloudSketch AI: trasforma testo in diagrammi architetturali multi-cloud (AWS, Azure, GCP) usando Google Gemini. Include export draw.io e rendering SVG nativo.", link: "Lavori in corso (GitHub) →" },
             cardJSON: { desc: "Libreria Python avanzata per analizzare struttura, coerenza e qualità di JSON complessi. Integra collasso dinamico delle mappe (AI-Native) per ridurre l'uso di token negli LLM.", link: "Lavori in corso (GitHub) →" },
@@ -53,7 +75,7 @@ const translations = {
                 "Ingegnerizzazione pipeline di riconciliazione dati in Python per verificare consistenza tra vCenter, Morpheus CMP e ServiceNow ITSM",
                 "Sviluppo strumenti di verifica connettività massiva basati su Bash usando netcat e ping per ambienti Windows/Linux",
                 "Implementazione Secret Management (Cyphers) e auditing RBAC per piattaforme cloud multi-tenant",
-                "Sviluppo Tesi Magistrale (in corso): progettazione di un'architettura Token-Efficient basata su Model Context Protocol (MCP) per l'interazione conversazionale tra Large Language Models e ServiceNow CMDB"
+                "Sviluppo di task di automazione (Bash, PowerShell) e configurazioni Chef per il lifecycle management di Application Server e database multi-engine su HPE Morpheus CMP e AWS"
             ]
         },
         education: {
@@ -81,8 +103,21 @@ const translations = {
             btnProjects: "View Projects",
             btnCV: "Download CV"
         },
-        sectionTitles: { projects: "Projects", experience: "Experience", education: "Education", certs: "Certifications", skills: "Skills" },
+        sectionTitles: {
+            projects: "Projects",
+            workProjects: "Work-Related & Enterprise Projects",
+            academicProjects: "Academic & Personal Projects",
+            experience: "Experience",
+            education: "Education",
+            certs: "Certifications",
+            skills: "Skills"
+        },
         projects: {
+            cardCMP: {
+                title: "Enterprise CMP & Multi-Engine Automation",
+                desc: "End-to-end lifecycle engineering and automation for enterprise infrastructure, Application Servers, and multi-engine databases on AWS and HPE Morpheus CMP.",
+                link: "Case Study →"
+            },
             card1: { desc: "Repository with exercises and projects for the Advanced Web Applications 1 course (2025).", link: "View →" },
             cardCS: {
                 title: "Cybersecurity Master",
@@ -99,13 +134,22 @@ const translations = {
                 desc: "Specialization of the DINOv2 visual foundation model for robust and sub-pixel accurate semantic correspondence, using PEFT techniques (LoRA, BitFit) and Segment Anything (SAM).",
                 link: "GitHub Source →"
             },
+            cardThesis: {
+                badge: "🎓 M.Sc. Thesis · IDSIA (USI-SUPSI) · In Progress",
+                title: "HRC Intelligent Design Assistant",
+                desc: "Development of an intelligent LLM-driven assistant and interactive 3D WebGL (Three.js) simulation for designing and validating human-robot collaborative (HRC) industrial cells. Integrates RAG over safety standards (ISO/TS 15066) and ergonomics for self-planning and task allocation, alongside automated safety, ergonomics, and cycle-time validation algorithms.",
+                link: "In progress →"
+            },
             cardRL: {
                 title: "Robot Learning Projects",
                 desc: "A comprehensive collection of projects and exercises for the Robot Learning course, including Sim-to-Real extension, Q-Learning, and Policy Gradients.",
                 link: "Explore →"
             },
-            card2: { desc: "Python and Bash scripts for cloud infrastructure automation and multi-tenant management.", link: "In development →" },
-            card3: { desc: "Tools to verify data consistency between vCenter, Morpheus, and ServiceNow.", link: "In development →" },
+            card3: {
+                title: "Data Reconciliation Tools",
+                desc: "Python data reconciliation pipelines to verify consistency between vCenter, Morpheus, and ServiceNow ITSM, with Bash tools for connectivity checks across 500+ endpoints.",
+                link: "In development →"
+            },
             card4: { desc: "Node.js library to convert Markdown to PDF with KaTeX support and professional styling.", link: "View →" },
             cardCDG: { desc: "CloudSketch AI: translates natural language into interactive multi-cloud (AWS, Azure, GCP) architecture diagrams using Google Gemini, with draw.io export.", link: "Work in progress (GitHub) →" },
             cardJSON: { desc: "Advanced Python library to profile the structure and data quality of complex JSONs. Includes AI-native dynamic map collapse for massive LLM token reduction.", link: "Work in progress (GitHub) →" },
@@ -119,7 +163,7 @@ const translations = {
                 "Engineered data reconciliation pipelines in Python to verify consistency between vCenter, Morpheus CMP, and ServiceNow ITSM",
                 "Developed Bash-based bulk connectivity verification tools using netcat and ping for Windows/Linux environments",
                 "Implemented Secret Management (Cyphers) and RBAC auditing for multi-tenant cloud platforms",
-                "Master Thesis (ongoing): designing a Token-Efficient architecture based on Model Context Protocol (MCP) for conversational integration between Large Language Models and ServiceNow CMDB"
+                "Development of automation tasks (Bash, PowerShell) and Chef configurations for lifecycle management of Application Servers and multi-engine databases on HPE Morpheus CMP and AWS"
             ]
         },
         education: {
@@ -147,8 +191,21 @@ const translations = {
             btnProjects: "Voir Projets",
             btnCV: "Télécharger CV"
         },
-        sectionTitles: { projects: "Projets", experience: "Expérience", education: "Formation", certs: "Certifications", skills: "Compétences" },
+        sectionTitles: {
+            projects: "Projets",
+            workProjects: "Projets Professionnels & Entreprise",
+            academicProjects: "Projets Académiques & Personnels",
+            experience: "Expérience",
+            education: "Formation",
+            certs: "Certifications",
+            skills: "Compétences"
+        },
         projects: {
+            cardCMP: {
+                title: "Enterprise CMP & Multi-Engine Automation",
+                desc: "Ingénierie et automatisation de bout en bout du cycle de vie des infrastructures d'entreprise, serveurs applicatifs et bases de données multi-moteurs sur AWS et HPE Morpheus CMP.",
+                link: "Étude de Cas →"
+            },
             card1: { desc: "Dépôt avec exercices et projets du cours Advanced Web Applications 1 (2025).", link: "Voir →" },
             cardCS: {
                 title: "Cybersecurity Master",
@@ -165,13 +222,22 @@ const translations = {
                 desc: "Spécialisation du modèle visuel DINOv2 pour une correspondance sémantique robuste et précise au sous-pixel près, en utilisant les techniques PEFT (LoRA, BitFit) et Segment Anything (SAM).",
                 link: "Code GitHub →"
             },
+            cardThesis: {
+                badge: "🎓 Thèse de Master · IDSIA (USI-SUPSI) · En cours",
+                title: "HRC Intelligent Design Assistant",
+                desc: "Développement d'un assistant intelligent basé sur LLM et simulation 3D WebGL (Three.js) pour la conception et validation de cellules industrielles collaboratives homme-robot (HRC). Comprend une architecture RAG sur les normes de sécurité (ISO/TS 15066) et d'ergonomie pour l'auto-planification, ainsi que des algorithmes de validation automatique de la sécurité et des temps de cycle.",
+                link: "En cours →"
+            },
             cardRL: {
                 title: "Robot Learning Projects",
                 desc: "Une collection complète de projets et d'exercices pour le cours Robot Learning, y compris l'extension Sim-to-Real, le Q-Learning et les Policy Gradients.",
                 link: "Explorer →"
             },
-            card2: { desc: "Scripts Python et Bash pour l'automatisation de l'infrastructure cloud.", link: "En développement →" },
-            card3: { desc: "Outils pour vérifier la cohérence des données entre vCenter, Morpheus et ServiceNow.", link: "En développement →" },
+            card3: {
+                title: "Data Reconciliation Tools",
+                desc: "Pipelines de réconciliation de données en Python pour vérifier la cohérence entre vCenter, Morpheus et ServiceNow ITSM, avec outils Bash pour tester la connectivité de 500+ endpoints.",
+                link: "En développement →"
+            },
             card4: { desc: "Bibliothèque Node.js pour convertir Markdown en PDF avec support KaTeX.", link: "Voir →" },
             cardCDG: { desc: "CloudSketch AI : transforme le texte en diagrammes d'architecture multi-cloud (AWS, Azure, GCP) avec Google Gemini et export draw.io.", link: "Travail en cours (GitHub) →" },
             cardJSON: { desc: "Bibliothèque Python avancée pour l'analyse de structure et la qualité des données JSON, avec réduction des tokens (AI-native) pour les LLM.", link: "Travail en cours (GitHub) →" },
@@ -185,7 +251,7 @@ const translations = {
                 "Conception de pipelines de réconciliation de données en Python pour vCenter, Morpheus CMP et ServiceNow ITSM",
                 "Développement d'outils de vérification de connectivité en masse basés sur Bash pour Windows/Linux",
                 "Mise en œuvre de la gestion des secrets (Cyphers) et de l'audit RBAC pour les plateformes cloud",
-                "Thèse de Master (en cours) : conception d'une architecture Token-Efficient basée sur Model Context Protocol (MCP) pour l'intégration conversationnelle entre Large Language Models et ServiceNow CMDB"
+                "Développement de tâches d'automatisation (Bash, PowerShell) et configurations Chef pour la gestion du cycle de vie des serveurs applicatifs et bases de données multi-moteurs sur HPE Morpheus CMP et AWS"
             ]
         },
         education: {
@@ -244,6 +310,8 @@ const examsData = [
     { level: "Magistrale", name: "Bioinformatics", grade: "29/30" },
     { level: "Magistrale", name: "Large Language Models for Software Engineering (LLM4SE)", grade: "28/30" },
     { level: "Magistrale", name: "Advanced Machine Learning", grade: "26/30" },
+    { level: "Magistrale", name: "Robot Learning", grade: "30/30" },
+    { level: "Magistrale", name: { it: "Architetture dei sistemi di elaborazione", en: "Computer Architecture", fr: "Architecture des Systèmes Informatiques" }, grade: "22/30" },
     { level: "Magistrale", name: { it: "Programmazione di sistema", en: "System Programming", fr: "Programmation Système" }, grade: { it: "In corso", en: "In progress", fr: "En cours" } },
     // Erasmus
     { level: "Erasmus", name: "Entrepreneurship", grade: { it: "Convalidato", en: "Validated", fr: "Validé" } },
@@ -274,6 +342,88 @@ const csProjectsData = [
     { name: "📄 Academic Lab Reports", desc: "Hub of cybersecurity lab reports (LaTeX + PDF): Operation Shady RAT, Web Authentication, and more.", link: "https://johnnyprice29.github.io/cybersecurity/academic_reports_it.html" }
 ];
 
+// ===== CMP CASE STUDY DATA =====
+const cmpModalData = {
+    it: {
+        title: "Enterprise CMP & Multi-Engine Automation",
+        subtitle: "Ingegnerizzazione della piattaforma HPE Morpheus & Infrastruttura AWS per la governance e automazione del ciclo di vita enterprise",
+        sections: [
+            {
+                badge: "Cloud & Orchestration",
+                title: "Piattaforma & Governance Ibrida",
+                desc: "Digitalizzazione ed ingegnerizzazione end-to-end della Cloud Management Platform (HPE Morpheus) su infrastruttura AWS. Sviluppo di task di automazione e workflow modulari in Bash e PowerShell integrati con Chef per la standardizzazione di ambienti enterprise Linux e Windows Server multi-tenant."
+            },
+            {
+                badge: "Middleware & OS",
+                title: "Application Server Lifecycle Management",
+                desc: "Provisioning automatizzato e sicuro a partire da standard AMI AWS. Automazione delle procedure di manutenzione operativa (start, stop e restart controllato di NGINX, Apache HTTPD, HAProxy). Gestione dello storage a livello OS (partizionamento e formattazione volumi) e distribuzione pacchetti software via Chef cookbooks."
+            },
+            {
+                badge: "Multi-Engine DB",
+                title: "Database Operations & Lifecycle (Oracle, Exadata, MSSQL, PostgreSQL, MySQL, MongoDB)",
+                desc: "Automazione completa del ciclo di vita dei database eterogenei: gestione della sicurezza (creazione/eliminazione utenti, lock/unlock e configurazione profili), controllo granulare degli accessi (ruoli, privilegi e grant DDL/DML), gestione operativa tablespace (Oracle/Exadata) e controllo di stato dei servizi DB senza riavvio delle macchine virtuali."
+            },
+            {
+                badge: "Impact & Results",
+                title: "Impatto Operativo & Risultati",
+                desc: "Azzeramento delle attività operative manuali ripetitive, drastica riduzione del lead time di rilascio da diversi giorni a pochi minuti, eliminazione del margine di errore umano e piena conformità con le policy di sicurezza e governance enterprise."
+            }
+        ]
+    },
+    en: {
+        title: "Enterprise CMP & Multi-Engine Automation",
+        subtitle: "HPE Morpheus Platform Engineering & AWS Infrastructure for Enterprise Lifecycle Governance",
+        sections: [
+            {
+                badge: "Cloud & Orchestration",
+                title: "Hybrid Governance & CMP Platform",
+                desc: "End-to-end engineering and automation of a Cloud Management Platform (HPE Morpheus) on AWS infrastructure. Development of modular automation tasks in Bash and PowerShell integrated with Chef to standardize multi-tenant Linux and Windows Server environments."
+            },
+            {
+                badge: "Middleware & OS",
+                title: "Application Server Lifecycle Management",
+                desc: "Automated and secure provisioning from standard AWS AMIs. Automation of scheduled maintenance procedures (controlled start, stop, restart for NGINX, Apache HTTPD, HAProxy). OS-level volume formatting and software package configuration via Chef cookbooks."
+            },
+            {
+                badge: "Multi-Engine DB",
+                title: "Database Operations & Lifecycle (Oracle, Exadata, MSSQL, PostgreSQL, MySQL, MongoDB)",
+                desc: "Complete lifecycle automation for heterogeneous databases: identity & access governance (user creation/deletion, lock/unlock, user profiles), fine-grained privileges/grants, tablespace management on Oracle/Exadata, and database service runtime controls without VM restarts."
+            },
+            {
+                badge: "Impact & Results",
+                title: "Operational Impact & Deliverables",
+                desc: "Elimination of repetitive manual operations, drastic reduction in provisioning lead times from days to minutes, removal of human error risks, and enforcement of rigorous enterprise security and compliance standards."
+            }
+        ]
+    },
+    fr: {
+        title: "Enterprise CMP & Multi-Engine Automation",
+        subtitle: "Ingénierie de la plateforme HPE Morpheus & Infrastructure AWS pour la gouvernance d'entreprise",
+        sections: [
+            {
+                badge: "Cloud & Orchestration",
+                title: "Plateforme CMP & Gouvernance Hybride",
+                desc: "Ingénierie et automatisation de bout en bout d'une plateforme de gestion cloud (HPE Morpheus) sur infrastructure AWS. Conception de tâches modulaires en Bash et PowerShell avec Chef pour standardiser les environnements Linux et Windows Server multi-tenant."
+            },
+            {
+                badge: "Middleware & OS",
+                title: "Gestion du cycle de vie des serveurs applicatifs",
+                desc: "Provisionnement automatisé à partir d'AMI AWS standardisées. Automatisation de la maintenance opérationnelle (démarrage, arrêt et redémarrage contrôlés de NGINX, HTTPD, HAProxy). Gestion du stockage au niveau OS et déploiement de packages via des cookbooks Chef."
+            },
+            {
+                badge: "Multi-Engine DB",
+                title: "Opérations & Cycle de vie des bases de données (Oracle, Exadata, MSSQL, PostgreSQL, MySQL, MongoDB)",
+                desc: "Automatisation complète du cycle de vie de bases de données hétérogènes : gestion des identités et des accès (création/suppression, verrouillage, profils), contrôle granulaire des privilèges (rôles, grants), gestion des tablespaces Oracle/Exadata et contrôle des services DB sans arrêt des VM."
+            },
+            {
+                badge: "Impact & Results",
+                title: "Impact opérationnel & Résultats",
+                desc: "Élimination des interventions manuelles répétitives, réduction radicale des délais de livraison de plusieurs jours à quelques minutes, suppression des erreurs humaines et garantie de conformité stricte aux normes de sécurité d'entreprise."
+            }
+        ]
+    }
+};
+
 // ===== RENDER EXAMS =====
 function renderExams(lang) {
     const lists = {
@@ -294,7 +444,10 @@ function renderExams(lang) {
 }
 
 // ===== SET LANGUAGE =====
+let currentLang = 'en';
+
 function setLanguage(lang) {
+    currentLang = lang;
     const t = translations[lang];
     if (!t) return;
 
@@ -320,12 +473,17 @@ function setLanguage(lang) {
 
     // Section Titles
     setText('[data-i18n="section.projects"]', t.sectionTitles.projects);
+    setText('[data-i18n="section.workProjects"]', t.sectionTitles.workProjects);
+    setText('[data-i18n="section.academicProjects"]', t.sectionTitles.academicProjects);
     setText('[data-i18n="section.experience"]', t.sectionTitles.experience);
     setText('[data-i18n="section.education"]', t.sectionTitles.education);
     setText('[data-i18n="section.certs"]', t.sectionTitles.certs);
     setText('[data-i18n="section.skills"]', t.sectionTitles.skills);
 
     // Projects
+    setText('[data-i18n="project.cardCMP.title"]', t.projects.cardCMP.title);
+    setText('[data-i18n="project.cardCMP.desc"]', t.projects.cardCMP.desc);
+    setText('[data-i18n="project.cardCMP.link"]', t.projects.cardCMP.link);
     setText('[data-i18n="project.cardRL.title"]', t.projects.cardRL.title);
     setText('[data-i18n="project.cardRL.desc"]', t.projects.cardRL.desc);
     setText('[data-i18n="project.cardRL.link"]', t.projects.cardRL.link);
@@ -338,14 +496,31 @@ function setLanguage(lang) {
     setText('[data-i18n="project.cardAML.title"]', t.projects.cardAML.title);
     setText('[data-i18n="project.cardAML.desc"]', t.projects.cardAML.desc);
     setText('[data-i18n="project.cardAML.link"]', t.projects.cardAML.link);
+    if (t.projects.cardThesis) {
+        setText('[data-i18n="project.cardThesis.badge"]', t.projects.cardThesis.badge);
+        setText('[data-i18n="project.cardThesis.title"]', t.projects.cardThesis.title);
+        setText('[data-i18n="project.cardThesis.desc"]', t.projects.cardThesis.desc);
+        setText('[data-i18n="project.cardThesis.link"]', t.projects.cardThesis.link);
+    }
     setText('[data-i18n="project.card1.desc"]', t.projects.card1.desc);
     setText('[data-i18n="project.card1.link"]', t.projects.card1.link);
-    setText('[data-i18n="project.card2.desc"]', t.projects.card2.desc);
-    setText('[data-i18n="project.card2.link"]', t.projects.card2.link);
+    setText('[data-i18n="project.card3.title"]', t.projects.card3.title);
     setText('[data-i18n="project.card3.desc"]', t.projects.card3.desc);
     setText('[data-i18n="project.card3.link"]', t.projects.card3.link);
     setText('[data-i18n="project.card4.desc"]', t.projects.card4.desc);
     setText('[data-i18n="project.card4.link"]', t.projects.card4.link);
+    if (t.projects.cardCDG) {
+        setText('[data-i18n="project.cardCDG.desc"]', t.projects.cardCDG.desc);
+        setText('[data-i18n="project.cardCDG.link"]', t.projects.cardCDG.link);
+    }
+    if (t.projects.cardJSON) {
+        setText('[data-i18n="project.cardJSON.desc"]', t.projects.cardJSON.desc);
+        setText('[data-i18n="project.cardJSON.link"]', t.projects.cardJSON.link);
+    }
+    if (t.projects.cardDrone) {
+        setText('[data-i18n="project.cardDrone.desc"]', t.projects.cardDrone.desc);
+        setText('[data-i18n="project.cardDrone.link"]', t.projects.cardDrone.link);
+    }
 
     // Experience
     setText('[data-i18n="exp.role"]', t.experience.role);
@@ -411,9 +586,54 @@ function setLanguage(lang) {
     // Update Modal Titles
     const modalTitle = document.querySelector('.modal-title');
     if (modalTitle) modalTitle.textContent = t.projects.cardRL.title;
+
+    // Update active CMP modal if open
+    const cmpModal = document.getElementById('cmp-modal');
+    if (cmpModal && cmpModal.classList.contains('active')) {
+        renderCMPModal(lang);
+    }
 }
 
 // ===== MODAL LOGIC =====
+function renderCMPModal(lang) {
+    const data = cmpModalData[lang] || cmpModalData['en'];
+    const titleEl = document.getElementById('cmp-modal-title');
+    const subtitleEl = document.getElementById('cmp-modal-subtitle');
+    const grid = document.getElementById('cmp-modal-grid');
+    if (!titleEl || !subtitleEl || !grid) return;
+
+    titleEl.textContent = data.title;
+    subtitleEl.textContent = data.subtitle;
+    grid.innerHTML = '';
+
+    data.sections.forEach(sec => {
+        const card = document.createElement('div');
+        card.className = 'case-study-card';
+        card.innerHTML = `
+            <span class="case-study-card-badge">${sec.badge}</span>
+            <h4>${sec.title}</h4>
+            <p>${sec.desc}</p>
+        `;
+        grid.appendChild(card);
+    });
+}
+
+function openCMPModal() {
+    const modal = document.getElementById('cmp-modal');
+    const body = document.body;
+    if (!modal) return;
+    renderCMPModal(currentLang);
+    modal.classList.add('active');
+    body.style.overflow = 'hidden';
+}
+
+function closeCMPModal() {
+    const modal = document.getElementById('cmp-modal');
+    const body = document.body;
+    if (modal) modal.classList.remove('active');
+    body.style.overflow = 'auto';
+}
+
 function openRLModal() {
     const modal = document.getElementById('rl-modal');
     const body = document.body;
@@ -516,6 +736,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeCSBtn = document.querySelector('.close-modal-cs');
     if (closeCSBtn) closeCSBtn.addEventListener('click', closeCSModal);
 
+    // CMP Case Study Explore Button
+    const cmpExploreBtn = document.querySelector('[data-cmp-explore]');
+    if (cmpExploreBtn) {
+        cmpExploreBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openCMPModal();
+        });
+    }
+
+    const cmpModal = document.getElementById('cmp-modal');
+    if (cmpModal) {
+        cmpModal.addEventListener('click', (e) => {
+            if (e.target === cmpModal) closeCMPModal();
+        });
+    }
+    const closeCMPBtn = document.querySelector('.close-modal-cmp');
+    if (closeCMPBtn) closeCMPBtn.addEventListener('click', closeCMPModal);
+
     // Default language
     setLanguage('en');
 
@@ -537,9 +775,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const href = this.getAttribute('href');
+            if (href && href.length > 1) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
     });
 });

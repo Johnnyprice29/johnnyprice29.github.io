@@ -312,6 +312,31 @@ section {
     background: var(--bg-secondary);
 }
 
+.project-subsection {
+    margin-bottom: 4rem;
+}
+
+.project-subsection:last-child {
+    margin-bottom: 0;
+}
+
+.subsection-title {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.subsection-title::after {
+    content: "";
+    flex: 1;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-blue) 0%, rgba(66, 153, 225, 0.2) 70%, transparent 100%);
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -361,6 +386,38 @@ section {
     background: var(--accent-cyan);
     color: #fff;
     padding: 0 0.2rem;
+}
+
+/* Distinct Thesis Project Card */
+.project-card-thesis {
+    border-left: 6px solid var(--accent-magenta);
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, rgba(247, 250, 252, 0.96) 100%);
+    box-shadow: 6px 6px 0 rgba(237, 100, 166, 0.2);
+}
+
+.project-card-thesis:hover {
+    transform: translateY(-8px) translateX(-4px);
+    box-shadow: 10px 10px 0 var(--accent-magenta);
+    border-color: var(--accent-magenta);
+}
+
+.thesis-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 50%, #d53f8c 100%);
+    color: #fff;
+    padding: 0.3rem 0.75rem;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    width: fit-content;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Experience */
@@ -871,11 +928,100 @@ section {
     flex-grow: 1;
 }
 
+/* Case Study Modal Custom Styles */
+.case-study-modal-content {
+    max-width: 960px;
+    padding: 3.5rem 3rem;
+}
+
+.case-study-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.case-study-badge {
+    display: inline-block;
+    background: var(--accent-magenta);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.35rem 0.9rem;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 0 var(--text-primary);
+}
+
+.case-study-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 760px;
+    margin: 0.8rem auto 0;
+    line-height: 1.6;
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.case-study-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--text-primary);
+    padding: 2rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.case-study-card:hover {
+    background: #fff;
+    border-color: var(--accent-cyan);
+    transform: translateY(-4px);
+    box-shadow: 8px 8px 0 var(--accent-cyan);
+}
+
+.case-study-card-badge {
+    display: inline-block;
+    align-self: flex-start;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--accent-blue);
+    background: rgba(66, 153, 225, 0.12);
+    padding: 0.25rem 0.6rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--accent-blue);
+}
+
+.case-study-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.18rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+    line-height: 1.35;
+}
+
+.case-study-card p {
+    font-size: 0.93rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin: 0;
+    flex-grow: 1;
+}
+
 @media (max-width: 768px) {
     .modal-content {
         padding: 3rem 1.5rem;
     }
     .modal-title {
         font-size: 2rem;
+    }
+    .case-study-grid {
+        grid-template-columns: 1fr;
     }
 }
